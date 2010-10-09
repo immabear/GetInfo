@@ -112,13 +112,13 @@ button:hover{
 	display:none;
 	font-size:12px;
 	color:white;
+	border:0;
 }
 
 .tooltip {
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow.png);
 	height:119px;
 	width:210px;
-	border:0;
 }
 
 .tooltip table {
