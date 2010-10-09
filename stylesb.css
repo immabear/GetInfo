@@ -109,12 +109,10 @@ button:hover{
 	display:none;
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow.png);
 	font-size:12px;
-	position:relative;
 	height:70px;
 	width:160px;
 	padding:25px;
 	color:white;	
-	border:0;
 }
 
 .tooltip table {
@@ -134,12 +132,10 @@ button:hover{
 	display:none;
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow_big.png);
 	padding:40px 30px 10px 30px;
-	position:relative;
 	height:163px;
 	width:310px;
 	font-size:11px;
 	color:white;
-	border:0;
 }
 
 .tooltipbig table {
