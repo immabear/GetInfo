@@ -35,7 +35,7 @@ function tab(id){
    var taskbar=id.parentNode; 
  }
  id.className="middle";
- var idbut="#"+id+" button";
+ var idbut="#"+id.id+" button";
  $(idbut).each(function(){
   (this).className=(this).className.split(' ')[0]+' activebutton';
  });
