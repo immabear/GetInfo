@@ -109,8 +109,9 @@ button:hover{
 	display:none;
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow.png);
 	font-size:12px;
-	height:70px;
-	width:160px;
+	height:119px;
+	width:211px;
+	padding:25px;
 	color:white;	
 }
 
@@ -130,6 +131,7 @@ button:hover{
 .tooltipbig {
 	display:none;
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow_big.png);
+	padding:40px 30px 10px 30px;
 	height:163px;
 	width:310px;
 	font-size:11px;
