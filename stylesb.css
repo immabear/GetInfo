@@ -118,6 +118,7 @@ button:hover{
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow.png);
 	height:115px;
 	width:210px;
+	border:0;
 }
 
 .tooltip table {
