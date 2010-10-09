@@ -56,8 +56,8 @@ button:hover{
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	background: #D1D5EE;
-	background: -moz-linear-gradient(center top, #6FCAF0 0%,#D1D5EE 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6FCAF0),color-stop(1, #D1D5EE));
+	background: -moz-linear-gradient(center top, #EEF2FF 0%,#A9DBF6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EEF2FF),color-stop(1, #A9DBF6));
 }
 
 .right{
