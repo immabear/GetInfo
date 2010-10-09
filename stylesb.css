@@ -122,7 +122,7 @@ button:hover{
 }
 
 .tooltip table {
-	height:94px;
+	height:90px;
 	width:194px;
 	margin:10px 0px 0px 10px;
 	font-size:12px;
@@ -140,7 +140,7 @@ button:hover{
 }
 
 .tooltipbig table {
-	height:184px;
+	height:190px;
 	width:330px;
 	margin:20px 0px 0px 20px;
 	font-size:11px;
