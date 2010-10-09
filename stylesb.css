@@ -129,7 +129,9 @@ button:hover{
 	color:white;
 }
 
-
+.tooltip table td, .tooltipbig table td {
+	border:0;
+}
 
 .tooltipbig {
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow_big.png);

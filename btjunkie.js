@@ -27,11 +27,11 @@ function parsebtjunkie(id,data){
    '<div class="tooltipbig">'+
     '<table>'+
      '<tr>'+
-      '<td style="height:80px"><b id="searchresult'+index+'">'+title[index]+'</b>'+
+      '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+
 	  '</td>'+
 	 '</tr>'+
 	 '<tr>'+
-	  '<td>'+
+	  '<td style="height:30px">'+
 	   '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
 	   '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
 	  '</td>'+

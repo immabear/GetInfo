@@ -41,12 +41,12 @@ function parsestagevu(id,data){
 	'<div class="tooltipbig">'+
 	 '<table>'+
 	  '<tr>'+
-	   '<td style="height:80px"><b id="searchresult'+index+'">'+alt[index]+'</b><br>'+
+	   '<td><b id="searchresult'+index+'">'+alt[index]+'</b><br>'+
 	    desc[index]+
 	   '</td>'+
 	  '</tr>'+
 	  '<tr>'+
-	   '<td>'+
+	   '<td style="height:30px">'+
 	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
 	    '<button onclick="downloadstagevu(\''+loc[index]+'\');" class="buttonbig">View/Download</button>'+
 	   '</td>'+
