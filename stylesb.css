@@ -40,7 +40,7 @@ button{
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D1D5EE),color-stop(1, #EEF2FF));
 }
 
-button:hover{
+button:hover,.activebutton{
 	color:#000000;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
