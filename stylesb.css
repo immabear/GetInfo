@@ -105,13 +105,17 @@ button:hover{
 	float:left;
 }
 
-.tooltip {
+.tooltip,.tooltipbig  {
 	display:none;
-	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow.png);
+	background: -moz-linear-gradient(center top, #D1D5EE 0%,#EEF2FF 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D1D5EE),color-stop(1, #EEF2FF));
 	font-size:12px;
+	color:white;	
+}
+
+.tooltip {
 	height:124px;
 	width:214px;
-	color:white;	
 }
 
 .tooltip table {
@@ -128,12 +132,8 @@ button:hover{
 }
 
 .tooltipbig {
-	display:none;
-	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow_big.png);
 	height:215px;
 	width:375px;
-	font-size:11px;
-	color:white;
 }
 
 .tooltipbig table {
@@ -179,7 +179,7 @@ button:hover{
 	height:600px;
 	color:black;
 	position:absolute;
-	z-index:9999;
+	z-index:10;
 	left:50%;
 	top:50%;
 	margin-left:-400px;
