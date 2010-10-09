@@ -35,8 +35,15 @@ function tab(id){
    var taskbar=id.parentNode; 
  }
  id.className="middle";
+ var idbut="#"+id+" button";
+ $(idbut).each(function(){
+  (this).className=(this).className.split(' ')[0]+' activebutton';
+ });
  var idtd="#"+taskbar.id+" td[class]";
  $(idtd).each(function(){
+  $(this).find("button").each(function(){
+   (this).className=(this).className.split(' ')[0];
+  });
   if((this).cellIndex<id.cellIndex){
    if((this).cellIndex==0){(this).className="farleft";}
    else(this).className="left";
