@@ -38,6 +38,7 @@ function tab(id){
  var idbut="#"+id.id+" button";
  $(idbut).each(function(){
   (this).className=(this).className.split(' ')[0]+' activebutton';
+  alert((this).className);
  });
  var idtd="#"+taskbar.id+" td[class]";
  $(idtd).each(function(){
