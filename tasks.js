@@ -35,13 +35,10 @@ function tab(id){
    var taskbar=id.parentNode; 
  }
  id.className="middle";
- var idbut="#"+id.id+" button";
- $(idbut).each(function(){
+ $("#"+id.id+" button").each(function(){
   (this).className=(this).className.split(' ')[0]+' activebutton';
-  alert((this).className);
  });
- var idtd="#"+taskbar.id+" td[class]";
- $(idtd).each(function(){
+ $("#"+taskbar.id+" td[class]").each(function(){
   if((this).cellIndex!==id.cellIndex){
    $(this).find("button").each(function(){
     (this).className=(this).className.split(' ')[0];
