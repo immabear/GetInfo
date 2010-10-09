@@ -135,13 +135,13 @@ button:hover{
 
 .tooltipbig {
 	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow_big.png);
-	height:163px;
-	width:340px;
+	height:183px;
+	width:360px;
 }
 
 .tooltipbig table {
-	height:133px;
-	width:310px;
+	height:153px;
+	width:330px;
 	margin:10px 0px 0px 10px;
 	font-size:11px;
 	color:white;
