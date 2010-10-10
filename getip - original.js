@@ -91,10 +91,7 @@ var page="
    <td id='searchtasktd' class='right'><button id='searchtask' class='buttonmed' onclick='tab(this.parentNode);show(\"search\",\"searchbox\")'>Search</button></td>
    <td id='infotasktd' class='right'><button id='infotask' class='buttonmed' onclick='tab(this.parentNode);show(\"info\")'>Info</button></td>
    <td id='fillertask'>&nbsp;</td>
-   <td class='farright' id='minmaxtd'>
-    <button id='minmax' class='buttonmed' onclick='minmaximize(0)'>Minimize</button>
-	<button id='exit' class='buttonmed' onclick='exit()'>[X]</button>
-   </td>
+   <td class='farright' id='minmaxtd'><button id='minmax' class='buttonmed' onclick='minmaximize(0)'>Minimize</button></td>
   </tr>
  </table>
  <div id='home'>
