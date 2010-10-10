@@ -1,6 +1,6 @@
 function Retriever(){
 var Clients=["stagevu","btjunkie","debug"];
-var ClientsS=[]; var ClientsC=[]; var ClientsD=[]; var ClientsC2=[]; var ClientsSC=[]; var ClientsSX=[];
+var ClientsS=[]; var ClientsC=[]; var ClientsD=[]; var ClientsC2=[]; var ClientsSC=[];
 var Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"];
 var DbS=[];
 String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
@@ -8,7 +8,7 @@ for(var t=0;t<Clients.length;t++){
  ClientsS[t]='<script src="'+Db[0]+Clients[t]+'.js"></script>';
  ClientsC[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data.responseText); break;';
  ClientsD[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data); break;';
- var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'")';
+ var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",ClientsS['+t+'],ClientsX['+t+'])';
  switch(Clients[t]){
   case Clients[0]:
    ClientsC2[t]=
