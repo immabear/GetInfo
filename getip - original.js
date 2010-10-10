@@ -41,6 +41,8 @@ for(var t=1;t<Db.length;t++){
  DbS[t]='<script src="'+Db[0]+Db[t]+'"></script>';
 }
 var page="
+<!doctype html> 
+<html lang='en'> 
 <head>
 <link rel='shortcut icon' href='"+Db[0]+"favicon.jpg'/>
 <link rel='stylesheet' type='text/css' href='"+Db[0]+"stylesb.css'/>
@@ -131,6 +133,7 @@ var page="
 </div>
 <div id='background'></div>
 <div id='searchframe' style='display:none'></div>
-</body>";
+</body>
+</html>";
 return page;
 }
