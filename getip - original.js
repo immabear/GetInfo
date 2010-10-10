@@ -92,6 +92,7 @@ var page="
    <td id='infotasktd' class='right'><button id='infotask' class='buttonmed' onclick='tab(this.parentNode);show(\"info\")'>Info</button></td>
    <td id='fillertask'>&nbsp;</td>
    <td class='farright' id='minmaxtd'><button id='minmax' class='buttonmed' onclick='minmaximize(0)'>Minimize</button></td>
+   <td class='farright' id='exittd'><button id='exit' class='buttonmed' onclick='exit()'>Exit</button></td>
   </tr>
  </table>
  <div id='home'>
