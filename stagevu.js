@@ -35,7 +35,7 @@ function parsestagevu(id,data){
    });
    com[index]='<table style="margin:0;width:100%"><tr><td class="comoverlap">'+com[index]+'/5 Stars | Length: '+lng[index]+'</td></tr></table>';
    tablerow=
-    '<div id="result'+index+'" class="resultimg" style="width:160 !important;height:90 !important;background:url('+src[index]+')">'+
+    '<div id="result'+index+'" class="resultimgsm" style="background:url('+src[index]+')">'+
 	 com[index]+
 	'</div>'+
 	'<div class="tooltipbig">'+

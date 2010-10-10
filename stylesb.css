@@ -103,7 +103,7 @@ button:hover{
 	border-right:0;
 }
 
-.resultimg{
+.resultimg, .resultimgsm{
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
@@ -113,9 +113,17 @@ button:hover{
 	margin:10px;
 	margin-bottom:0px;
 	margin-right:0px;
+	float:left;
+}
+
+.resultimg{
 	height:185px;
 	width:125px;
-	float:left;
+}
+
+.resultimgsm{
+	height:90px;
+	width:160px;
 }
 
 .tooltip,.tooltipbig  {
