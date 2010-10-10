@@ -44,6 +44,7 @@ var page="
 <!doctype html> 
 <html lang='en'> 
 <head>
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
 <link rel='shortcut icon' href='"+Db[0]+"favicon.jpg'/>
 <link rel='stylesheet' type='text/css' href='"+Db[0]+"stylesb.css'/>
 <title>\u22D8GET: INFO\u22D9 by IMMABEAR</title>
