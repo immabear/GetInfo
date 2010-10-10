@@ -84,7 +84,7 @@ var page="
 </head>
 <body onload='aligntd();fetchPage(\"homebox\",sources[0]);'>
 <div id='bodydiv'>
- <table id='maintaskbar' cellspacing='0'>
+ <table id='maintaskbar'>
   <tr id='taskbar'>
    <td id='hometasktd' class='middle'><button id='hometask' class='buttonmed activebutton' onclick='tab(this.parentNode);show(\"home\",\"homebox\")'>Home</button></td>
    <td id='searchtasktd' class='right'><button id='searchtask' class='buttonmed' onclick='tab(this.parentNode);show(\"search\",\"searchbox\")'>Search</button></td>
@@ -94,7 +94,7 @@ var page="
   </tr>
  </table>
  <div id='home'>
-  <table id='hometaskbar' cellspacing='0'>
+  <table id='hometaskbar'>
    <tr id='movietask'>
     <td id='theatertasktd' class='middle'><button id='theatertask' class='buttonbig activebutton' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[0]);'>In Theaters</button></td>
     <td id='soontasktd' class='right'><button id='soontask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[1]);'>Coming Soon</button></td>
@@ -106,7 +106,7 @@ var page="
   </div>
  </div>
  <div id='search' style='display:none'>
-  <table id='searchtaskbar' cellspacing='0'>
+  <table id='searchtaskbar'>
    <tr>
     <td class='farleft' id='clientselect'>
      <select id='searchtype'>
@@ -122,7 +122,7 @@ var page="
   </div>
  </div>
  <div id='info' style='display:none'>
-  <table id='infotaskbar' cellspacing='0'>
+  <table id='infotaskbar'>
    <tr>
     <td id='infobox' onclick='tab(this)'>
      GET: INFO by IMMABEAR<br><br><br><br><br><br><br><br>Version: 1.00 (10/08/2010)<br><button onclick='alert(\"Nope.\")'>Update</button>
