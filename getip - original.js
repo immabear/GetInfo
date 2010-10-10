@@ -1,6 +1,6 @@
 function Retriever(){
 var Clients=["stagevu","btjunkie","debug"];
-var ClientsS=[]; var ClientsC=[]; var ClientsD=[]; var ClientsC2=[]; var ClientsSC=[];
+var ClientsS=[]; var ClientsC=[]; var ClientsD=[]; var ClientsC2=[]; var ClientsSC=[]; var ClientsSX=[];
 var Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"];
 var DbS=[];
 String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
@@ -83,7 +83,7 @@ var page="
  }
 </script>
 </head>
-<body onload='aligntd();fetchPage(\"homebox\",sources[0],,\"*\",\"*\");'>
+<body onload='aligntd();fetchPage(\"homebox\",sources[0],\"\",\"*\",\"*\");'>
 <div id='bodydiv'>
  <table id='maintaskbar'>
   <tr id='taskbar'>
