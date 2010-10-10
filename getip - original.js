@@ -107,7 +107,7 @@ var page="
  </div>
  <div id='search' style='display:none'>
   <table id='searchtaskbar' cellspacing='0'>
-   <tr id='searchtasktr'>
+   <tr>
     <td class='farleft' id='clientselect'>
      <select id='searchtype'>
       <option value=''>Choose Type</option>
@@ -123,7 +123,7 @@ var page="
  </div>
  <div id='info' style='display:none'>
   <table id='infotaskbar' cellspacing='0'>
-   <tr id='infotasktr'>
+   <tr>
     <td id='infobox' onclick='tab(this)'>
      GET: INFO by IMMABEAR<br><br><br><br><br><br><br><br>Version: 1.00 (10/08/2010)<br><button onclick='alert(\"Nope.\")'>Update</button>
     </td>
