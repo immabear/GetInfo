@@ -11,7 +11,7 @@
  */
 
 jQuery.ajax = (function(_ajax){
-    alert(testing);
+
     var protocol = location.protocol,
         hostname = location.hostname,
         exRegex = RegExp(protocol + '//' + hostname),
@@ -23,7 +23,7 @@ jQuery.ajax = (function(_ajax){
     }
     
     return function(o) {
-        
+        alert(o.testing);
         var url = o.url;
         
         if ( /get/i.test(o.type) && !/json/i.test(o.dataType) && isExternal(url) ) {
