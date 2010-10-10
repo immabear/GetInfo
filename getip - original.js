@@ -49,7 +49,7 @@ var page="
 <title>\u22D8GET: INFO\u22D9 by IMMABEAR</title>
 <script src=\"http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js\"></script>
 "+DbS.join(' ')+ClientsS.join(' ')+"
-<script language=\"javascript\">
+<script>
  function parseswitch(id,data,parser,type){
   switch(type){
    case 'rss':
@@ -107,7 +107,7 @@ var page="
  </div>
  <div id='search' style='display:none'>
   <table id='searchtaskbar' cellspacing='0'>
-   <tr id='searchtask'>
+   <tr id='searchtasktr'>
     <td class='farleft' id='clientselect'>
      <select id='searchtype'>
       <option value=''>Choose Type</option>
@@ -123,7 +123,7 @@ var page="
  </div>
  <div id='info' style='display:none'>
   <table id='infotaskbar' cellspacing='0'>
-   <tr id='infotask'>
+   <tr id='infotasktr'>
     <td id='infobox' onclick='tab(this)'>
      GET: INFO by IMMABEAR<br><br><br><br><br><br><br><br>Version: 1.00 (10/08/2010)<br><button onclick='alert(\"Nope.\")'>Update</button>
     </td>
