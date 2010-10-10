@@ -83,7 +83,7 @@ var page="
  }
 </script>
 </head>
-<body onload='aligntd();fetchPage(\"homebox\",sources[0]);'>
+<body onload='aligntd();fetchPage(\"homebox\",sources[0],,\"*\",\"*\");'>
 <div id='bodydiv'>
  <table id='maintaskbar'>
   <tr id='taskbar'>

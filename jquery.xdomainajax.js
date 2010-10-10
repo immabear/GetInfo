@@ -16,14 +16,13 @@ jQuery.ajax = (function(_ajax){
         hostname = location.hostname,
         exRegex = RegExp(protocol + '//' + hostname),
         YQL = 'http' + (/^https/.test(protocol)?'s':'') + '://query.yahooapis.com/v1/public/yql?callback=?',
-        query = 'select * from html where url="{URL}" and xpath="*"';
+        query = 'select {SELECT} from html where url="{URL}" and xpath="{XPATH}"';
     
     function isExternal(url) {
         return !exRegex.test(url) && /:\/\//.test(url);
     }
     
     return function(o) {
-        alert(o.testing);
         var url = o.url;
         
         if ( /get/i.test(o.type) && !/json/i.test(o.dataType) && isExternal(url) ) {
@@ -32,7 +31,8 @@ jQuery.ajax = (function(_ajax){
             
             o.url = YQL;
             o.dataType = 'json';
-            
+            query = query.replace("{SELECT}",o.select);
+			query = query.replace("{XPATH}",o.xpath);
             o.data = {
                 q: query.replace(
                     '{URL}',
