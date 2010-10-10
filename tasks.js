@@ -4,6 +4,7 @@ var sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone
 function fetchPage(id,url,parser){
  document.getElementById(id).innerHTML='Searching...';
  $.ajax({
+  testing: "loltest",
   type: "GET",
   url: url,
   error: function(request, status){

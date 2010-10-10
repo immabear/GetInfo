@@ -11,7 +11,7 @@
  */
 
 jQuery.ajax = (function(_ajax){
-    
+    alert(testing);
     var protocol = location.protocol,
         hostname = location.hostname,
         exRegex = RegExp(protocol + '//' + hostname),
