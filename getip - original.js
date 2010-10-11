@@ -8,7 +8,7 @@ for(var t=0;t<Clients.length;t++){
  ClientsS[t]='<script src="'+Db[0]+Clients[t]+'.js"></script>';
  ClientsC[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data.responseText); break;';
  ClientsD[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data); break;';
- var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",ClientsS['+t+'],ClientsX['+t+'])';
+ var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",ClientsS['+t+'],xpaths)';
  switch(Clients[t]){
   case Clients[0]:
    ClientsC2[t]=
@@ -75,7 +75,8 @@ var page="
   }
  }
  function search(){
-  var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\");
+  var xpaths=document.getElementById('searchtags').value.split("|")[1];
+  var tags=document.getElementById('searchtags').value.split("|")[0].replace(/ /g,\"+\");
   var type=document.getElementById('searchtype').value;
   switch(type){
     "+ClientsC2.join(' ')+"
