@@ -46,6 +46,9 @@ function parsebtjunkie(id,data){
  //idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
  //idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
  idobj.innerHTML=tablecd;
+ aligntd();
+ $('#searchbox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
 }
 function parsebtjunkie1(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
