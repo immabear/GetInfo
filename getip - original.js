@@ -8,7 +8,7 @@ for(var t=0;t<Clients.length;t++){
  ClientsS[t]='<script src="'+Db[0]+Clients[t]+'.js"></script>';
  ClientsC[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data.responseText); break;';
  ClientsD[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data); break;';
- var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",xpaths,ClientsX['+t+'])';
+ var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",ClientsS['+t+'],ClientsX['+t+'])';
  switch(Clients[t]){
   case Clients[0]:
    ClientsC2[t]=
@@ -75,8 +75,7 @@ var page="
   }
  }
  function search(){
-  var xpaths=document.getElementById('searchtags').value.split('|')[1];
-  var tags=document.getElementById('searchtags').value.split('|')[0].replace(/ /g,\"+\");
+  var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\");
   var type=document.getElementById('searchtype').value;
   switch(type){
     "+ClientsC2.join(' ')+"
@@ -116,7 +115,7 @@ var page="
       "+ClientsSC.join(' ')+"
      </select>
     </td>
-    <td id='searchcont'><input id='searchtags' type='text' size='25' value='Search Tags|*'></td>
+    <td id='searchcont'><input id='searchtags' type='text' size='25' value='Search Tags'></td>
     <td class='farright' id='searchbuttd'><button id='searchbut' class='buttonmed' onclick='search()'>Search</button></td>
    </tr>
   </table>

@@ -1,6 +1,6 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
-ClientsS[1]='th.a, th.p.a, th.font';
-ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr';
+ClientsS[1]='p.a.content, p.a.href, a.content, font.content';
+ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th';
 function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
  idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
