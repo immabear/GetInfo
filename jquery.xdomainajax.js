@@ -33,7 +33,7 @@ jQuery.ajax = (function(_ajax){
             
             o.url = YQL;
             o.dataType = 'json';
-            querysx = query.replace("{SELECT}",o.select);
+            var querysx = query.replace("{SELECT}",o.select);
 			querysx = querysx.replace("{XPATH}",o.xpath);
 			alert(query);
             o.data = {
