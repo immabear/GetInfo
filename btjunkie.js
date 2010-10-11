@@ -19,8 +19,7 @@ function parsebtjunkie2(id,data){
   (this).find('a').each(function(){
    title=(this).innerHTML;
    loc=(this).href;
-   break;
-  });
+   });
   (this).find('font').each(function(index){
    switch(index){
     case 0:
