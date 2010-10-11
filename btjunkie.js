@@ -1,4 +1,4 @@
-ClientsU[1]="rss~http://btjunkie.org/rss.xml?query=|";
+ClientsU[1]="html~http://btjunkie.org/rss.xml?query=|";
 ClientsS[1]='a, p.a, th.font';
 ClientsX[1]='//div[@id="main"]/form//table[1]//tr/th';
 function parsebtjunkie(id,data){
