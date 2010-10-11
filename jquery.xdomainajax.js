@@ -16,7 +16,7 @@ jQuery.ajax = (function(_ajax){
         hostname = location.hostname,
         exRegex = RegExp(protocol + '//' + hostname),
         YQL = 'http' + (/^https/.test(protocol)?'s':'') + '://query.yahooapis.com/v1/public/yql?callback=?',
-        query = "select {SELECT} from html where url='{URL}' and xpath='{XPATH}'";
+        query = "select {SELECT} from html where url='{URL}' and (xpath='{XPATH}')";
 		
     
     function isExternal(url) {
