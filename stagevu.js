@@ -5,11 +5,6 @@ ClientsU[0]="html~http://stagevu.com/search?for=|&in=Videos";
 ClientsS[0]="*";
 ClientsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
- var idobj=document.getElementById(id);
- idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
- idobj.style.display='';
-}
-function parsestagevu1(id,data){
  var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='';
  document.getElementById(id).innerHTML='';
  $(data).find('div').each(function(index){
