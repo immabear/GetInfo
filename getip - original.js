@@ -75,8 +75,8 @@ var page="
   }
  }
  function search(){
-  var xpaths=document.getElementById('searchtags').value.split("|")[1];
-  var tags=document.getElementById('searchtags').value.split("|")[0].replace(/ /g,\"+\");
+  var xpaths=document.getElementById('searchtags').value.split('|')[1];
+  var tags=document.getElementById('searchtags').value.split('|')[0].replace(/ /g,\"+\");
   var type=document.getElementById('searchtype').value;
   switch(type){
     "+ClientsC2.join(' ')+"
