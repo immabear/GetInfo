@@ -32,11 +32,10 @@ jQuery.ajax = (function(_ajax){
             
             o.url = YQL;
             o.dataType = 'json';
-            var querysx = query.replace("{SELECT}",o.select);
-			querysx = querysx.replace("{XPATH}",o.xpath);
-			querysx = querysx.replace("{URL}",url+(o.data ? (/\?/.test(url) ? '&' : '?')+jQuery.param(o.data) : ''));
+            var querysx = query.replace("{SELECT}",o.select).replace("{XPATH}",o.xpath).replace("{URL}",url+(o.data ? (/\?/.test(url) ? '&' : '?')+jQuery.param(o.data) : ''));
+			alert(querysx);
             o.data = {
-                q: encodeURIComponent(querysx),
+                q: querysx,
                 format: 'xml'
             };
             
