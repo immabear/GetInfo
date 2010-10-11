@@ -16,6 +16,11 @@ function parsebtjunkie(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
  idobj.innerHTML=data;
+ $('#'+idobj+' table').find('tr').each(function(index){
+  tablerow=(this).innerHTML;
+  tablecd=tablecd+'/n'+tablerow;
+ })
+ idobj.innerHTML=tablecd;
 }
 function parsebtjunkie3(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
