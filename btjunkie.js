@@ -5,53 +5,47 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
- var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
+ var title=[]; var seed=[]; var leech=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
  idobj.innerHTML=data;
  $(idobj).find('p').each(function(index){
   title[index]=$(this).text();
-  tablerow=title[index];
-  tablecd=tablecd+'/n'+tablerow;
+  loc[index]=$(this).attr('href');
+  leech[index]='';
+  seed[index]='';
+  size[index]='';
+  com[index]=
+  '<table style="margin:0;width:100%">'+
+   '<tr>'+
+    '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
+   '</tr>'+
+   '<tr>'+
+    '<td class="comoverlap">Size: '+size[index]+'</td>'+
+   '</tr>'+
+  '</table>';
+  tablerow=
+   '<div id="result'+index+'" class="resultimgsm">'+
+   com[index]+
+   '</div>'+
+   '<div class="tooltipbig">'+
+    '<table>'+
+     '<tr>'+
+      '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+
+	  '</td>'+
+	 '</tr>'+
+	 '<tr>'+
+	  '<td style="height:30px">'+
+	   '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
+	   '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
+	  '</td>'+
+	 '</tr>'+
+	'</table>'+
+   '</div>';
+  tablecd=tablecd+tablerow;
  });
  //idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
  //idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
  idobj.innerHTML=tablecd;
-}
-function parsebtjunkie2(id,data){
- var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
- var idobj=document.getElementById(id);
- idobj.innerHTML=data;
- $('#'+idobj.id).find('tr').each(function(index){
-  tablerow=(this).innerHTML;
-  tablecd=tablecd+'/n'+tablerow;
- });
- //idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
- idobj.innerHTML=tablecd;
-}
-function parsebtjunkie3(id,data){
- var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
- var idobj=document.getElementById(id);
- idobj.innerHTML=data;
- $('#'+id+' th').each(function(index){
-  (this).find('a').each(function(){
-   title=(this).innerHTML;
-   loc=(this).href;
-   });
-  (this).find('font').each(function(index){
-   switch(index){
-    case 0:
-	 
-   }
-  });
-  tablerow='';
-  tablecd=tablecd+tablerow;
- });
- idobj.innerHTML='<textarea style="width:100%;height:100%">';
- $(data.th).find('th').each(function(index){
-  idobj.innerHTML=idobj.innerHTML+'\n'+(this).innerHTML;
- })
- idobj.innerHTML=idobj.innerHTML+'</textarea>';
- idobj.style.display='';
 }
 function parsebtjunkie1(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
