@@ -1,10 +1,36 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
-ClientsS[1]='*';
-ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr';
+ClientsS[1]='p.a.href, p.a.content, font.content';
+ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th';
 function parsebtjunkie(id,data){
- var idobj=document.getElementById(id);
  idobj.innerHTML='<textarea style="width:100%;height:100%">';
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
+ $(data).find('th').each(function(index){
+  idobj.innerHTML=idobj.innerHTML+'\n'+(this).innerHTML;
+ })
+ var idobj=document.getElementById(id);
+ idobj.innerHTML=idobj.innerHTML+'</textarea>';
+ idobj.style.display='';
+}
+function parsebtjunkie2(id,data){
+ var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
+ var idobj=document.getElementById(id);
+ idobj.innerHTML=data;
+ $('#'+id+' th').each(function(index){
+  (this).find('a').each(function(){
+   title=(this).innerHTML;
+   loc=(this).href;
+   break;
+  });
+  (this).find('font').each(function(index){
+   switch(index){
+    case 0:
+	 
+   }
+  });
+  tablerow='';
+  tablecd=tablecd+tablerow;
+ });
+ idobj.innerHTML='<textarea style="width:100%;height:100%">';
  $(data.th).find('th').each(function(index){
   idobj.innerHTML=idobj.innerHTML+'\n'+(this).innerHTML;
  })
