@@ -2,7 +2,7 @@ var ClientsU=[];
 var ClientsS=[];
 var ClientsX=[];
 ClientsU[0]="html~http://stagevu.com/search?for=|&in=Videos";
-ClientsS[0]="div";
+ClientsS[0]="*";
 ClientsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
  var idobj=document.getElementById(id);
