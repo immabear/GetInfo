@@ -1,6 +1,6 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
-ClientsS[1]='*'; //p.a.href, p.a.content, font.content
-ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th[position()<(last()-2)]/p/a';
+ClientsS[1]='href,content'; //p.a.href, p.a.content, font.content
+ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th[position()<(last()-2)]/p/a | //div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th[position()<(last()-2)]/font | //div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th[position()<(last()-2)]/a/strong';
 function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
  //idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
