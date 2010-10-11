@@ -15,7 +15,7 @@ function parsebtjunkie2(id,data){
 function parsebtjunkie(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
- idobj.innerHTML=data;
+ idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
 }
 function parsebtjunkie3(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
