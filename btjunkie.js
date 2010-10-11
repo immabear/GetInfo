@@ -2,6 +2,11 @@ ClientsU[1]="rss~http://btjunkie.org/rss.xml?query=|";
 ClientsS[1]='a, p.a, th.font';
 ClientsX[1]='//div[@id="main"]/form//table[1]//tr/th';
 function parsebtjunkie(id,data){
+ var idobj=document.getElementById(id);
+ idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
+ idobj.style.display='';
+}
+function parsebtjunkie1(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  $.each(data.query.results.item,function(index){
   title[index]=(this).title.split("  [")[0];
