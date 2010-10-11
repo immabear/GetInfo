@@ -19,7 +19,7 @@ function parsebtjunkie(id,data){
  $('#'+idobj.id+' table').find('tr').each(function(index){
   tablerow=(this).innerHTML;
   tablecd=tablecd+'/n'+tablerow;
- })
+ });
  idobj.innerHTML=tablecd;
 }
 function parsebtjunkie3(id,data){
