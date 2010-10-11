@@ -1,6 +1,6 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
 ClientsS[1]='*';
-ClientsX[1]='//div[@id="main"]/form//table[1]//tr';
+ClientsX[1]='//div[@id="main"]/form';
 function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
  idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
