@@ -33,6 +33,7 @@ jQuery.ajax = (function(_ajax){
             o.dataType = 'json';
             query = query.replace("{SELECT}",o.select);
 			query = query.replace("{XPATH}",o.xpath);
+			alert(query);
             o.data = {
                 q: query.replace(
                     '{URL}',
