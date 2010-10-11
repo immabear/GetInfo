@@ -2,8 +2,9 @@ ClientsU[1]="html~http://btjunkie.org/search?q=|";
 ClientsS[1]='*';
 ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr';
 function parsebtjunkie(id,data){
+ var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
- idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
+ idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data.join("\\n")+'</textarea>';
  idobj.style.display='';
 }
 function parsebtjunkie1(id,data){
