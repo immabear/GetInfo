@@ -9,6 +9,7 @@ function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
  $(data).find('p').each(function(index){
   title[index]=(this).text();
+  tablerow=title[index];
   tablecd=tablecd+'/n'+tablerow;
  });
  idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
