@@ -1,18 +1,11 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
 ClientsS[1]='*'; //p.a.href, p.a.content, font.content
 ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table';
-function parsebtjunkie2(id,data){
- var idobj=document.getElementById(id);
- idobj.innerHTML='<textarea style="width:100%;height:100%">';
- var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
- $(data).find('th').each(function(index){
-  idobj.innerHTML=idobj.innerHTML+'\n'+(this).innerHTML;
- })
- var idobj=document.getElementById(id);
- idobj.innerHTML=idobj.innerHTML+'</textarea>';
- idobj.style.display='';
-}
 function parsebtjunkie(id,data){
+ var idobj=document.getElementById(id);
+ idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
+}
+function parsebtjunkie2(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
  idobj.innerHTML=data;
