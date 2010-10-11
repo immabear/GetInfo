@@ -1,5 +1,5 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
-ClientsS[1]='*';
+ClientsS[1]='th.p.a.content, th.p.a.href, th.a.content, th.font.content';
 ClientsX[1]='//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr';
 function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
