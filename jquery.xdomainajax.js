@@ -34,7 +34,6 @@ jQuery.ajax = (function(_ajax){
             o.dataType = 'json';
             var querysx = query.replace("{SELECT}",o.select);
 			querysx = querysx.replace("{XPATH}",o.xpath);
-			alert(querysx);
             o.data = {
                 q: querysx.replace(
                     '{URL}',
