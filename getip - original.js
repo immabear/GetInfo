@@ -8,7 +8,7 @@ for(var t=0;t<Clients.length;t++){
  ClientsS[t]='<script src="'+Db[0]+Clients[t]+'.js"></script>';
  ClientsC[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data.responseText); break;';
  ClientsD[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data); break;';
- var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",ClientsS['+t+'],xpaths)';
+ var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",xpaths,ClientsX['+t+'])';
  switch(Clients[t]){
   case Clients[0]:
    ClientsC2[t]=
