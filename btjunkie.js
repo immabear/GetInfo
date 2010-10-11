@@ -5,9 +5,14 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
+ var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
- $(data);
- idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
+ $(data).find('p').each(function(index){
+  title[index]=(this).text();
+  tablecd=tablecd+'/n'+tablerow;
+ });
+ idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
+ //idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
  //idobj.innerHTML=data;
 }
 function parsebtjunkie2(id,data){
