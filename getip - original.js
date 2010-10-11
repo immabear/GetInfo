@@ -116,7 +116,7 @@ var page="
       "+ClientsSC.join(' ')+"
      </select>
     </td>
-    <td id='searchcont'><input id='searchtags' type='text' size='25' value='Search Tags'></td>
+    <td id='searchcont'><input id='searchtags' type='text' size='25' value='Search Tags|*'></td>
     <td class='farright' id='searchbuttd'><button id='searchbut' class='buttonmed' onclick='search()'>Search</button></td>
    </tr>
   </table>
