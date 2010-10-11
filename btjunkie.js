@@ -8,7 +8,7 @@ function parsebtjunkie(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
  var idobj=document.getElementById(id);
  $(data).find('p').each(function(index){
-  title[index]=(this).text();
+  title[index]=$(this).text();
   tablerow=title[index];
   tablecd=tablecd+'/n'+tablerow;
  });
