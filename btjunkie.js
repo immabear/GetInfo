@@ -20,7 +20,7 @@ function parsebtjunkie(id,data){
   tablerow=(this).innerHTML;
   tablecd=tablecd+'/n'+tablerow;
  });
- idobj.innerHTML=tablecd;
+ idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
 }
 function parsebtjunkie3(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
