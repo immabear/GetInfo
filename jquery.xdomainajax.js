@@ -56,9 +56,8 @@ jQuery.ajax = (function(_ajax){
                     
                     if (_success) {
                         // Fake XHR callback.
-						    alert(data.results.length);
                         _success.call(this, {
-                            responseText: data.results[0]
+                            responseText: data.results.join(" ")
                                 // YQL screws with <script>s
                                 // Get rid of them
                                 .replace(/<script[^>]+?\/>|<script(.|\s)*?\/script>/gi, '')
