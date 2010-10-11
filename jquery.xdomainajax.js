@@ -35,12 +35,12 @@ jQuery.ajax = (function(_ajax){
             var querysx = query.replace("{SELECT}",o.select);
 			querysx = querysx.replace("{XPATH}",o.xpath);
             o.data = {
-                q: querysx.replace(
+                q: encodeURIComponent(querysx.replace(
                     '{URL}',
                     url + (o.data ?
                         (/\?/.test(url) ? '&' : '?') + jQuery.param(o.data)
                     : '')
-                ),
+                )),
                 format: 'xml'
             };
             
