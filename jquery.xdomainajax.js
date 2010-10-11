@@ -34,13 +34,9 @@ jQuery.ajax = (function(_ajax){
             o.dataType = 'json';
             var querysx = query.replace("{SELECT}",o.select);
 			querysx = querysx.replace("{XPATH}",o.xpath);
+			querysx = querysx.replace("{URL}",url+(o.data ? (/\?/.test(url) ? '&' : '?')+jQuery.param(o.data) : ''));
             o.data = {
-                q: encodeURIComponent(querysx.replace(
-                    '{URL}',
-                    url + (o.data ?
-                        (/\?/.test(url) ? '&' : '?') + jQuery.param(o.data)
-                    : '')
-                )),
+                q: encodeURIComponent(querysx),
                 format: 'xml'
             };
             
