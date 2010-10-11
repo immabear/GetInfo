@@ -5,7 +5,7 @@ function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
  idobj.innerHTML='<textarea style="width:100%;height:100%">';
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
- $(data).find('th').each(function(index){
+ $(data.th).find('th').each(function(index){
   idobj.innerHTML=idobj.innerHTML+'\n'+(this).innerHTML;
  })
  idobj.innerHTML=idobj.innerHTML+'</textarea>';
