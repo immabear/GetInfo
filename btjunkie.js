@@ -6,6 +6,7 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
  var idobj=document.getElementById(id);
+ $(data);
  idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
  //idobj.innerHTML=data;
 }
