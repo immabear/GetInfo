@@ -97,9 +97,9 @@ var page="
  <div id='home'>
   <table id='hometaskbar'>
    <tr id='movietask'>
-    <td id='theatertasktd' class='middle'><button id='theatertask' class='buttonbig activebutton' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[0]);'>In Theaters</button></td>
-    <td id='soontasktd' class='right'><button id='soontask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[1]);'>Coming Soon</button></td>
-    <td id='dvdtasktd' class='right'><button id='dvdtask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[2]);'>On DVD/Bluray</button></td>
+    <td id='theatertasktd' class='middle'><button id='theatertask' class='buttonbig activebutton' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[0],\"\",\"*\",\"*\");'>In Theaters</button></td>
+    <td id='soontasktd' class='right'><button id='soontask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[1],\"\",\"*\",\"*\");'>Coming Soon</button></td>
+    <td id='dvdtasktd' class='right'><button id='dvdtask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[2],\"\",\"*\",\"*\");'>On DVD/Bluray</button></td>
     <td id='fillertasktd'>&nbsp;</td>
    </tr>
   </table>
