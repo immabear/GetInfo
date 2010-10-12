@@ -10,12 +10,12 @@ function parsebtjunkie(id,data){
  $.each(dataarray,function(index, value){
   if(index!==0&&index<2){
    dataarray[index]='<p'+value;
-   dataarray[index]= dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');//.replace(/strong>/g,'p>').replace(/font>/g,'p>');
+   dataarray[index]= dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    $(dataarray[index]).find('a').each(function(){
    title[index]=this.text();
    loc[index]=$(this).attr('href');
    });
-   temp=dataarray[index].text().split('|')[1].split(' ');
+   temp=$(dataarray[index]).text().split('|')[1].split(' ');
    $.each(temp,function(i){
     alert(i);
     //switch(i){
