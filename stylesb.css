@@ -126,6 +126,12 @@ button:hover{
 	width:160px;
 }
 
+.resultimg table, .resultimgsm table{
+	border-spacing:2px;
+	margin:0;
+	width:100%;
+}
+
 .tooltip,.tooltipbig  {
 	display:none;
 	font-size:12px;

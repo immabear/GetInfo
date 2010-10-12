@@ -38,7 +38,7 @@ function parsebtjunkie(id,data){
 	}
    });
    com[index]=
-   '<table style="margin:0;width:100%;border-spacing:2px">'+
+   '<table>'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
     '</tr>'+

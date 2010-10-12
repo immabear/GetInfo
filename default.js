@@ -15,7 +15,7 @@ function parse(id,data){
     }
    });
    if(!com[index]) com[index]='&nbsp;';
-   else com[index]='<table style="margin:0;width:100%"><tr><td class="comoverlap">'+com[index]+'</td></tr></table>';
+   else com[index]='<table><tr><td class="comoverlap">'+com[index]+'</td></tr></table>';
    tablerow=
     '<div id="result'+index+'" class="resultimg" style="background:url('+src[index]+')">'+
 	 com[index]+

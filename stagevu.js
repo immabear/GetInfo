@@ -41,7 +41,7 @@ function parsestagevu(id,data){
      lng[index]=lng[index].split('\;')[0];
 	}
    });
-   com[index]='<table style="margin:0;width:100%;border-spacing:2px"><tr><td class="comoverlap">'+com[index]+'/5 Stars | Length: '+lng[index]+'</td></tr></table>';
+   com[index]='<table><tr><td class="comoverlap">'+com[index]+'/5 Stars | Length: '+lng[index]+'</td></tr></table>';
    tablerow=
     '<div id="result'+index+'" class="resultimgsm" style="background:url('+src[index]+')">'+
 	 com[index]+
