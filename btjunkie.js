@@ -8,7 +8,7 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<2){
+  if(index!==0){
    dataarray[index]='<p'+value;
    dataarray[index]= dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    $(dataarray[index]).find('a').each(function(){
@@ -37,7 +37,7 @@ function parsebtjunkie(id,data){
 	}
    });
    com[index]=
-   '<table style="margin:0;width:100%">'+
+   '<table style="margin:0;width:100%;border-spacing:2px;">'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
     '</tr>'+
