@@ -7,9 +7,11 @@ ClientsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
  var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='', idobj=document.getElementById(id);
  idobj.innerHTML='';
- alert(data);
  $(data).find('div').each(function(index){
-  if($(this).find('div').attr('class')=='searcherror')tablecd='Search Complete: No Videos Found.';
+  if($(this).find('div').attr('class')=='searcherror'){
+   tablecd="...I'm sorry, Dave, I'm afraid I can't do that.";
+   error(objid.id);
+  }
   else if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
    $(this).find('img').each(function(){
     if($(this).attr('class')=='mvthumb'){
