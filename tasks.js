@@ -35,7 +35,6 @@ function error(id){
 function tab(id){
  switch(id){
   case 'searchtasktd':
-   document.getElementById('searchtags').focus();
    var taskbar=document.getElementById(id).parentNode;
    id=document.getElementById(id);
    break;
@@ -64,28 +63,12 @@ function tab(id){
 function show(id,idbox){
  var divs=document.getElementsByTagName('div');
  for(var t=0;t<divs.length;t++){
-  if(divs[t].id!=='bodydiv'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'&&divs[t].id!=='background'){
+  if(divs[t].id!=='bodydiv'|'background'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'){
    divs[t].style.display='none';
   }
  }
  document.getElementById(id).style.display='';
  if (idbox)document.getElementById(idbox).style.display='';
-}
-function insert(title,onc){
- var x=document.getElementById('taskbar').insertCell(2);
- x.onclick=function(){tab(this)};
- switch(onc){
-  case 0:
-   x.innerHTML=title+' <img src="http://www.casino770.com/new3/FrPages_html/close.gif" onclick="remove(this.parentNode.cellIndex);document.getElementById(\'searchframe\').style.display=\'none\'" style="border:2px solid black;">';
-   break;
-  default:
-   x.innerHTML=title+' <img src="http://www.casino770.com/new3/FrPages_html/close.gif" onclick="remove(this.parentNode.cellIndex);" style="border:2px solid black;">';
- }
- x.style.width='100px';
- aligntd();
-}
-function remove(index){
- var x=document.getElementById('taskbar').deleteCell(index);
 }
 function minmaximize(x){
  switch(x){
@@ -116,17 +99,11 @@ function aligntd(){
   }
  }
 }
-function exit(){
- self.close();
-}
 function advsearch(id){
  var tags=document.getElementById(id).innerHTML;
  tab('searchtasktd');
  show('search','searchbox');
  document.getElementById('searchtags').value=tags;
- $('#searchtags').bind('keypress',function(e) {
-  alert('Enter key was pressed.');
- });
 }
 function IMDb(id){
 minmaximize(0);
