@@ -8,14 +8,16 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-6)){ //index<((dataarray.length)-3)
+  if(index!==0&&index<((dataarray.length)-6)&&index<3){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
+   alert(dataarray[index]);
    $(dataarray[index]).find('a').each(function(){
     title[index]=this.text();
     loc[index]=$(this).attr('href');
 	alert(title[index]+'/n'+loc[index]);
    });
+   loc[index]=$(dataarray[index]).text().split('|')[0];
    title[index]=$(dataarray[index]).text().split('|')[0];
    temp=$(dataarray[index]).text().split('|')[1].split(' ');
    $.each(temp,function(i,val){
