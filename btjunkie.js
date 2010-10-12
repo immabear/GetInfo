@@ -18,9 +18,9 @@ function parsebtjunkie(id,data){
 	alert(title[index]+'/n'+loc[index]);
    });
    $(dataarray[index]).each(function(){
-   loc[index]=(this).text().split('|')[0];
-   title[index]=(this).text().split('|')[0];
-   temp=(this).text().split('|')[1].split(' ');
+   loc[index]=$(this).text().split('|')[0];
+   title[index]=$(this).text().split('|')[0];
+   temp=$(this).text().split('|')[1].split(' ');
    });
    $.each(temp,function(i,val){
     switch(i){
