@@ -17,9 +17,11 @@ function parsebtjunkie(id,data){
     loc[index]=$(this).attr('href');
 	alert(title[index]+'/n'+loc[index]);
    });
-   loc[index]=$(dataarray[index]).text().split('|')[0];
-   title[index]=$(dataarray[index]).text().split('|')[0];
-   temp=$(dataarray[index]).text().split('|')[1].split(' ');
+   $(dataarray[index]).each(function(){
+   loc[index]=(this).text().split('|')[0];
+   title[index]=(this).text().split('|')[0];
+   temp=(this).text().split('|')[1].split(' ');
+   });
    $.each(temp,function(i,val){
     switch(i){
 	 case 0:
