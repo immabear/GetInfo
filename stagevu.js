@@ -9,7 +9,7 @@ function parsestagevu(id,data){
  idobj.innerHTML='';
  alert(data);
  $(data).find('div').each(function(index){
-  if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'||!($(this).find('div[class="searcherror"]').each(function(){return true;}))){
+  if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'||!($(this).find('div[class="searcherror"]').each(function(){return false;}))){
    $(this).find('img').each(function(){
     if($(this).attr('class')=='mvthumb'){
      src[index]=$(this).attr('src');
