@@ -8,9 +8,9 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<5){
+  if(index!==0&&index<2){
    dataarray[index]='<p'+value;
-   dataarray[index]= dataarray[index].replace(/<.*p>[ ]+</g,'<');
+   dataarray[index]= dataarray[index].replace(/<.*p>.*</g,'<');
    alert(dataarray[index]);
    title[index]=$(dataarray[index]).find('a').text();
    //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
