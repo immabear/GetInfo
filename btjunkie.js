@@ -11,6 +11,7 @@ function parsebtjunkie(id,data){
   if(index!==0&&index<((dataarray.length)-6)){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
+   alert(dataarray[index]);
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|')[0];
    loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
@@ -36,7 +37,7 @@ function parsebtjunkie(id,data){
 	}
    });
    com[index]=
-   '<table style="margin:0;width:100%;border-spacing:2px;">'+
+   '<table style="margin:0;width:100%;border-spacing:2px">'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
     '</tr>'+
