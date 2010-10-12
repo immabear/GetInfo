@@ -63,21 +63,20 @@ function tab(id){
 function show(id,idbox){
  var divs=document.getElementsByTagName('div');
  for(var t=0;t<divs.length;t++){
-  if(divs[t].id!=='bodydiv'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'&&divs[t].id!=='background'){
-   divs[t].style.display='none';
-  }
+  if(divs[t].id!=='bodydiv'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'&&divs[t].id!=='background')divs[t].style.display='none';
  }
  document.getElementById(id).style.display='';
- if (idbox)document.getElementById(idbox).style.display='';
+ if(idbox)document.getElementById(idbox).style.display='';
 }
 function minmaximize(x){
+ var but=document.getElementById('minmax');
  switch(x){
   case 0:
    $("#searchframe").show(600);
    $("#bodydiv").animate({'marginTop': '-30px', 'top': '100%', 'height': '30px'}, 600,
     function(){
      $("#minmax").text("Maximize");
-     document.getElementById('minmax').onclick=function(){minmaximize()};
+     but.onclick=function(){minmaximize()};
 	}
    );
    break;
@@ -86,7 +85,7 @@ function minmaximize(x){
    $("#bodydiv").animate({'marginTop': '-300px', 'top': '50%', 'height': '600px'}, 600,
     function(){
      $("#minmax").text("Minimize");
-     document.getElementById('minmax').onclick=function(){minmaximize(0)};
+     but.onclick=function(){minmaximize(0)};
 	}
    );
  }
@@ -100,14 +99,12 @@ function aligntd(){
  }
 }
 function advsearch(id){
- var tags=document.getElementById(id).innerHTML;
  tab('searchtasktd');
  show('search','searchbox');
- document.getElementById('searchtags').value=tags;
+ document.getElementById('searchtags').value=document.getElementById(id).innerHTML;
 }
 function IMDb(id){
 minmaximize(0);
-var tags=document.getElementById(id).innerHTML.replace(/ /g,'+');
-document.getElementById('searchframe').innerHTML="<iframe src='http://www.imdb.com/find?s=all&q="+tags+"' class='searchframe' frameborder='0'></frame>";
+document.getElementById('searchframe').innerHTML="<iframe src='http://www.imdb.com/find?s=all&q="+document.getElementById(id).innerHTML.replace(/ /g,'+')+"' class='searchframe' frameborder='0'></frame>";
 $("#searchframe").show(600);
 }
