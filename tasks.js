@@ -3,7 +3,7 @@ var hal=["...I'm sorry, Dave, I'm afraid I can't do that."];
 var sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
 $('#searchtags').live('keypress',function(e){
  if(e.keyCode == 13) {
-  alert('Enter key was pressed.');
+  search();
  }
 });
 function fetchPage(id,url,parser,select,xpath){
