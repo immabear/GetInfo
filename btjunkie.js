@@ -13,7 +13,7 @@ function parsebtjunkie(id,data){
    $(dataarray[index]).find('a').each(function(){
     title[index]=$(this).text();
    });
-   dataarray[index]=($(dataarray[index]).text().replace(title[index],'')).split(' ');
+   dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
     alert(dataarray[index]);
    //$(dataarray[index]).children('font').each(function(){
    // cat[index]=$(this).text();
