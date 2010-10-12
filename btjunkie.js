@@ -1,22 +1,26 @@
 ClientsU[1]="html~http://btjunkie.org/search?q=|";
-ClientsS[1]='a, content'; //p.a.href, p.a.content, font.content
+ClientsS[1]='a, content';
 ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/p | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
- var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<10){
+  if(index!==0&&index<5){
    dataarray[index]='<p'+value;
     alert(index+dataarray[index]);
    $(dataarray[index]).find('a').each(function(){
     title[index]=$(this).text();
    });
-   $(dataarray[index]).find('font').each(function(indexii){
-    alert(indexii);
+   $(dataarray[index]).find('strong').each(function(){
+    cat[index]=$(this).text();
    });
+   $(dataarray[index]).find('font').each(function(){
+    com[index]=com[index]+$(this).text();
+   });
+   alert(title[index]+'\n'+cat[index]+'\n'+com[index]+'\n')
   }
  });
 }
