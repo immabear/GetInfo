@@ -15,7 +15,7 @@ function parsebtjunkie(id,data){
     title[index]=$(this).text();
    });
    $(dataarray[index]).find('strong').each(function(){
-    cat[index]=$(this).text();
+    cat[index]=$(this).innerHTML;
    });
    alert(title[index]+'\n'+cat[index]+'\n')
   }
