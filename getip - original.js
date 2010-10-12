@@ -1,41 +1,41 @@
 function Retriever(){
-var Clients=["stagevu","btjunkie","debug"],
-ClientsS=[], ClientsC=[], ClientsD=[], ClientsC2=[], ClientsSC=[],
+var Cs=["stagevu","btjunkie","debug"],
+CsS=[], CsC=[], CsD=[], CsC2=[], CsSC=[],
 Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"],
 DbS=[];
 String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
-for(var t=0;t<Clients.length;t++){
- ClientsS[t]='<script src="'+Db[0]+Clients[t]+'.js"></script>';
- ClientsC[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data.responseText); break;';
- ClientsD[t]='case "'+Clients[t]+'": parse'+Clients[t]+'(id,data); break;';
- var casefunction='("searchbox",ClientUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Clients[t]+'",ClientsS['+t+'],ClientsX['+t+'])';
- switch(Clients[t]){
-  case Clients[0]:
-   ClientsC2[t]=
+for(var t=0;t<Cs.length;t++){
+ CsS[t]='<script src="'+Db[0]+Cs[t]+'.js"></script>';
+ CsC[t]='case "'+Cs[t]+'": parse'+Cs[t]+'(id,data.responseText); break;';
+ CsD[t]='case "'+Cs[t]+'": parse'+Cs[t]+'(id,data); break;';
+ var CF='("searchbox",CUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Cs[t]+'",CsS['+t+'],CsX['+t+'])';
+ switch(Cs[t]){
+  case Cs[0]:
+   CsC2[t]=
     'default:
-	 var ClientUF=ClientsU['+t+'].split("~");
-	 switch(ClientUF[0]){
-	  case "html": fetchPage'+casefunction+';
+	 var CUF=CsU['+t+'].split("~");
+	 switch(CUF[0]){
+	  case "html": fetchPage'+CF+';
 	   break;
-	  case "rss": fetchRss'+casefunction+';
+	  case "rss": fetchRss'+CF+';
 	   break;
 	 }
 	 break;';
    break;
   default:
-   ClientsC2[t]=
-    'case "'+Clients[t]+'":
-	 var ClientUF=ClientsU['+t+'].split("~");
-	 switch(ClientUF[0]){
-	  case "html": fetchPage'+casefunction+';
+   CsC2[t]=
+    'case "'+Cs[t]+'":
+	 var CUF=CsU['+t+'].split("~");
+	 switch(CUF[0]){
+	  case "html": fetchPage'+CF+';
 	   break;
-	  case "rss": fetchRss'+casefunction+';
+	  case "rss": fetchRss'+CF+';
 	   break;
 	 }
 	 break;';
    break;
  }
- ClientsSC[t]='<option value="'+Clients[t]+'">'+Clients[t].capitalize()+':</option>';
+ CsSC[t]='<option value="'+Cs[t]+'">'+Cs[t].capitalize()+':</option>';
 }
 for(var t=1;t<Db.length;t++){
  DbS[t]='<script src="'+Db[0]+Db[t]+'"></script>';
@@ -49,7 +49,7 @@ var page="
 <link rel='stylesheet' type='text/css' href='"+Db[0]+"stylesb.css'/>
 <title>\u22D8GET: INFO\u22D9 by IMMABEAR</title>
 <script src=\"http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js\"></script>
-"+DbS.join(' ')+ClientsS.join(' ')+"
+"+DbS.join(' ')+CsS.join(' ')+"
 <script>
  function parseswitch(id,data,parser,type){
   switch(type){
@@ -58,7 +58,7 @@ var page="
      case '': error(id); break;
      default:
       switch(parser){
-       "+ClientsD.join(' ')+"
+       "+CsD.join(' ')+"
        default: parsedebug(id,data);
       }
     }
@@ -68,7 +68,7 @@ var page="
      case '': error(id); break;
      default:
       switch(parser){
-       "+ClientsC.join(' ')+"
+       "+CsC.join(' ')+"
        default: parse(id,data.responseText);
       }
     }
@@ -78,7 +78,7 @@ var page="
   var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\"),
   type=document.getElementById('searchtype').value;
   switch(type){
-    "+ClientsC2.join(' ')+"
+    "+CsC2.join(' ')+"
    }
  }
 </script>
@@ -109,10 +109,10 @@ var page="
  <div id='search' style='display:none'>
   <table id='searchtaskbar'>
    <tr>
-    <td class='farleft' id='clientselect'>
+    <td class='farleft' id='Cselect'>
      <select id='searchtype'>
       <option value=''>Choose Type</option>
-      "+ClientsSC.join(' ')+"
+      "+CsSC.join(' ')+"
      </select>
     </td>
     <td id='searchcont'><input id='searchtags' type='text' size='25' value='Search Tags'></td>

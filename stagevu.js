@@ -1,7 +1,7 @@
-var ClientsU=[], ClientsS=[], ClientsX=[];
-ClientsU[0]="html~http://stagevu.com/search?for=|&in=Videos";
-ClientsS[0]="*";
-ClientsX[0]='//div[@id="resultsbox1"]';
+var CsU=[], CsS=[], CsX=[];
+CsU[0]="html~http://stagevu.com/search?for=|&in=Videos";
+CsS[0]="*";
+CsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
  var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='', idobj=document.getElementById(id);
  idobj.innerHTML='';
