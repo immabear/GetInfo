@@ -5,9 +5,16 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
- var title=[]; var seed=[]; var leech=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
- var idobj=document.getElementById(id);
- idobj.innerHTML=data;
+ var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ dataarray=data.split('<p');
+ //idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
+ idobj.innerHTML='<textarea style="width:100%;height:100%">'+dataarray.join('TEST/n')+'</textarea>';
+ //idobj.innerHTML=tablecd;
+ //aligntd();
+ //$('#searchbox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='';
+}
+function parseparseparse(){
  $(idobj).find('p').each(function(index){
   title[index]=$(this).text();
   loc[index]=$(this).attr('href');
@@ -43,12 +50,6 @@ function parsebtjunkie(id,data){
    '</div>';
   tablecd=tablecd+tablerow;
  });
- //idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
- //idobj.innerHTML='<textarea style="width:100%;height:100%">'+data+'</textarea>';
- idobj.innerHTML=tablecd;
- aligntd();
- $('#searchbox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
 }
 function parsebtjunkie1(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
