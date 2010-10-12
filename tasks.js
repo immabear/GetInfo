@@ -63,7 +63,7 @@ function tab(id){
 function show(id,idbox){
  var divs=document.getElementsByTagName('div');
  for(var t=0;t<divs.length;t++){
-  if(divs[t].id!=='bodydiv'|'background'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'){
+  if(divs[t].id!==('bodydiv'|'background')&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'){
    divs[t].style.display='none';
   }
  }
