@@ -7,7 +7,7 @@ ClientsX[1]=
 function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
- alert(dataarray.length);
+ alert(dataarray[dataarray.length]);
  $.each(dataarray,function(index, value){
   if(index!==0&&index<((dataarray.length)-4)){ //index<((dataarray.length)-3)
    dataarray[index]='<p'+value;
