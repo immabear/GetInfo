@@ -11,7 +11,7 @@ function parsebtjunkie(id,data){
   if(index!==0&&index<5){
    dataarray[index]='<p'+value;
    title[index]=$(dataarray[index]).find('a').text();
-   alert($(dataarray[index]).find('font:nth-child(2)').text());
+   alert($(dataarray[index]).find(':nth-child(2)').text());
    //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
    // alert(dataarray[index]);
    //$(dataarray[index]).children('font').each(function(){
