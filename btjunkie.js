@@ -10,7 +10,7 @@ function parsebtjunkie(id,data){
  $.each(dataarray,function(index, value){
   if(index!==0&&index<2){
    dataarray[index]='<p'+value;
-   dataarray[index]= dataarray[index].replace(/<p>.*</g,'<');
+   dataarray[index]= dataarray[index].replace(/<p>[ ]+</g,'<');;//.replace(/strong>/g,'p>').replace(/font>/g,'p>');
    alert(dataarray[index]);
    title[index]=$(dataarray[index]).find('a').text();
    //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
