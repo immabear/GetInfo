@@ -1,9 +1,6 @@
 var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human error:","1)The script was initiated from an offline xul page (e.g. 'About:Blank') removing domain access.","2)An internet connection is not present.","3)The search query came back empty-handed, and the script threw a tantrum.","4)An unknown error occured, but it's your fault."];
 var hal=["...I'm sorry, Dave, I'm afraid I can't do that."];
 var sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
-$('#searchtags').bind('keypress',function(e) {
-  alert('Enter key was pressed.');
-});
 function fetchPage(id,url,parser,select,xpath){
  document.getElementById(id).innerHTML='Searching...';
  $.ajax({
@@ -35,6 +32,9 @@ function tab(id){
   case 'searchtasktd':
    var taskbar=document.getElementById(id).parentNode;
    id=document.getElementById(id);
+   $('#searchtags').bind('keypress',function(e){
+    alert('Enter key was pressed.');
+   });
    break;
  default:
    var taskbar=id.parentNode; 
@@ -121,6 +121,9 @@ function advsearch(id){
  tab('searchtasktd');
  show('search','searchbox');
  document.getElementById('searchtags').value=tags;
+ $('#searchtags').bind('keypress',function(e) {
+  alert('Enter key was pressed.');
+ });
 }
 function IMDb(id){
 minmaximize(0);
