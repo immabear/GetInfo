@@ -7,8 +7,18 @@ ClientsX[1]=
 function parsebtjunkie(id,data){
  var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split('<p');
+ for(var t=0;t<dataarray.length;t++){
+  dataarray[t]='<p'+dataarray[t];
+  $(dataarray[t]).find('p').each(function(index){
+   title[index]=$(this).text();
+   loc[index]=$(this).attr('href');
+  });
+  $(dataarray[t]).find('font').each(function(index){
+   alert(index);
+  });
+ };
  //idobj.innerHTML='<textarea style="width:100%;height:100%">'+tablecd+'</textarea>';
- idobj.innerHTML='<textarea style="width:100%;height:100%">'+dataarray.join('TEST/n')+'</textarea>';
+ idobj.innerHTML='<textarea style="width:100%;height:100%">'+dataarray.join(' ')+'</textarea>';
  //idobj.innerHTML=tablecd;
  //aligntd();
  //$('#searchbox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
