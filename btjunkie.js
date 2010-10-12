@@ -17,6 +17,7 @@ function parsebtjunkie(id,data){
     loc[index]=$(this).attr('href');
 	alert(title[index]+'/n'+loc[index]);
    });
+   title[index]=$(dataarray[index]).text().split('|')[0];
    temp=$(dataarray[index]).text().split('|')[1].split(' ');
    $.each(temp,function(i,val){
     switch(i){
