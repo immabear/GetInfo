@@ -8,7 +8,7 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-6)){
+  if(index!==0&&index<((dataarray.length)-6)&&index<3){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    alert(dataarray[index]);
@@ -21,6 +21,7 @@ function parsebtjunkie(id,data){
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|')[0];
    loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
+      alert(loc[index]);
    temp=temparray.split('|')[1].split(' ');
    $.each(temp,function(i,val){
     switch(i){
