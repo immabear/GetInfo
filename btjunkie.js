@@ -5,68 +5,78 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
   if(index!==0&&index<2){
    dataarray[index]='<p'+value;
    dataarray[index]= dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    $(dataarray[index]).find('a').each(function(){
-   title[index]=this.text();
-   loc[index]=$(this).attr('href');
+    title[index]=this.text();
+    loc[index]=$(this).attr('href');
    });
    temp=$(dataarray[index]).text().split('|')[1].split(' ');
    $.each(temp,function(i,val){
     alert(i+': '+val);
-    //switch(i){
-	 //case
-	//}
+    switch(i){
+	 case 0:
+	  cat[index]=val;
+	  break;
+     case 1:
+	  size[index]=val;
+	  break;
+     case 2:
+	  date[index]=val;
+	  break;
+     case 3:
+	  seed[index]=val;
+	  leech[index]='X';
+	  break;
+     case 4:
+	  leech[index]=val;
+	  break;
+	}
    });
-   //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
-   // alert(dataarray[index]);
-   //$(dataarray[index]).children('font').each(function(){
-    //cat[index]=$(this).text();
-    //alert(cat[index]);
-   //});
+   com[index]=
+   '<table style="margin:0;width:100%">'+
+    '<tr>'+
+     '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Size: '+size[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Category: '+cat[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Date: '+date[index]+'</td>'+
+    '</tr>'+
+   '</table>';
+   tablerow=
+    '<div id="result'+index+'" class="resultimgsm">'+
+     com[index]+
+    '</div>'+
+    '<div class="tooltipbig">'+
+     '<table>'+
+      '<tr>'+
+       '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+ 
+       '</td>'+
+	  '</tr>'+
+	  '<tr>'+
+	   '<td style="height:30px">'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
+	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
+	   '</td>'+
+	  '</tr>'+
+	 '</table>'+
+    '</div>';
+   tablecd=tablecd+tablerow;
   }
  });
-}
-function parseparseparse(){
- $(idobj).find('p').each(function(index){
-  title[index]=$(this).text();
-  loc[index]=$(this).attr('href');
-  leech[index]='';
-  seed[index]='';
-  size[index]='';
-  com[index]=
-  '<table style="margin:0;width:100%">'+
-   '<tr>'+
-    '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
-   '</tr>'+
-   '<tr>'+
-    '<td class="comoverlap">Size: '+size[index]+'</td>'+
-   '</tr>'+
-  '</table>';
-  tablerow=
-   '<div id="result'+index+'" class="resultimgsm">'+
-   com[index]+
-   '</div>'+
-   '<div class="tooltipbig">'+
-    '<table>'+
-     '<tr>'+
-      '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+
-	  '</td>'+
-	 '</tr>'+
-	 '<tr>'+
-	  '<td style="height:30px">'+
-	   '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
-	   '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
-	  '</td>'+
-	 '</tr>'+
-	'</table>'+
-   '</div>';
-  tablecd=tablecd+tablerow;
- });
+ document.getElementById(id).innerHTML=tablecd;
+ aligntd();
+ $('#homebox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
 }
 function parsebtjunkie1(id,data){
  var title=[]; var seed=[]; var leech=[]; var cat=[]; var size=[]; var com=[];var loc=[];var tablerow; var tablecd='';
