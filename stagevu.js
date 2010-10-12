@@ -1,11 +1,9 @@
-var ClientsU=[];
-var ClientsS=[];
-var ClientsX=[];
+var ClientsU=[], ClientsS=[], ClientsX=[];
 ClientsU[0]="html~http://stagevu.com/search?for=|&in=Videos";
 ClientsS[0]="*";
 ClientsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
- var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='', idobj=document.getElementById(id);
+ var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='', idobj=document.getElementById(id);
  idobj.innerHTML='';
  $(data).find('div').each(function(index){
   if($(this).find('div').attr('class')=='searcherror'){
@@ -68,7 +66,7 @@ function parsestagevu(id,data){
  aligntd();
  $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='';
+ var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='';
 }
 function downloadstagevu(loc){
  minmaximize(0);

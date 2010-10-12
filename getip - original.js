@@ -1,8 +1,8 @@
 function Retriever(){
-var Clients=["stagevu","btjunkie","debug"];
-var ClientsS=[]; var ClientsC=[]; var ClientsD=[]; var ClientsC2=[]; var ClientsSC=[];
-var Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"];
-var DbS=[];
+var Clients=["stagevu","btjunkie","debug"],
+ClientsS=[], ClientsC=[], ClientsD=[], ClientsC2=[], ClientsSC=[],
+Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"],
+DbS=[];
 String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
 for(var t=0;t<Clients.length;t++){
  ClientsS[t]='<script src="'+Db[0]+Clients[t]+'.js"></script>';
@@ -75,8 +75,8 @@ var page="
   }
  }
  function search(){
-  var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\");
-  var type=document.getElementById('searchtype').value;
+  var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\"),
+  type=document.getElementById('searchtype').value;
   switch(type){
     "+ClientsC2.join(' ')+"
    }

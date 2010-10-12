@@ -1,6 +1,6 @@
-var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human error:","1)The script was initiated from an offline xul page (e.g. 'About:Blank') removing domain access.","2)An internet connection is not present.","3)The search query came back empty-handed, and the script threw a tantrum.","4)An unknown error occured, but it's your fault."];
-var hal=["...I'm sorry, Dave, I'm afraid I can't do that."];
-var sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
+var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human error:","1)The script was initiated from an offline xul page (e.g. 'About:Blank') removing domain access.","2)An internet connection is not present.","3)The search query came back empty-handed, and the script threw a tantrum.","4)An unknown error occured, but it's your fault."],
+hal=["...I'm sorry, Dave, I'm afraid I can't do that."],
+sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
 $('#searchtags').live('keypress',function(e){
  if(e.keyCode == 13) {
   search();
@@ -23,9 +23,9 @@ function fetchPage(id,url,parser,select,xpath){
 }
 function fetchRss(id,url,parser){
  document.getElementById(id).innerHTML='Searching...';
-  var rssresults=[];
-  var query = "select * from feed where url='"+url+"'";
-  var yqlurl = "http://query.yahooapis.com/v1/public/yql?q="+encodeURIComponent(query)+"&format=json&callback=?";
+  var rssresults=[],
+  query = "select * from feed where url='"+url+"'",
+  yqlurl = "http://query.yahooapis.com/v1/public/yql?q="+encodeURIComponent(query)+"&format=json&callback=?";
   $.getJSON(yqlurl, function(data){parseswitch(id,data,parser,"rss");});
 }
 function error(id){
@@ -63,7 +63,7 @@ function tab(id){
 function show(id,idbox){
  var divs=document.getElementsByTagName('div');
  for(var t=0;t<divs.length;t++){
-  if(divs[t].id!==('bodydiv'|'background')&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'){
+  if(divs[t].id!=='bodydiv'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'&&divs[t].id!=='background'){
    divs[t].style.display='none';
   }
  }
