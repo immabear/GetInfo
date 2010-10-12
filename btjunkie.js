@@ -14,7 +14,7 @@ function parsebtjunkie(id,data){
    $(dataarray[index]).find('a').each(function(){
     title[index]=$(this).text();
    });
-   $(dataarray[index]).children('b').each(function(){
+   $(dataarray[index]).children('font').each(function(){
     cat[index]=$(this).text();
     alert(cat[index]);
    });
