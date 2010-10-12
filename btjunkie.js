@@ -9,7 +9,7 @@ function parsebtjunkie(id,data){
  dataarray=data.split("<p");
  alert(dataarray.length);
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-3)){ //index<((dataarray.length)-3)
+  if(index!==0&&index<((dataarray.length)-4)){ //index<((dataarray.length)-3)
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    $(dataarray[index]).find('a').each(function(){
