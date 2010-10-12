@@ -12,7 +12,7 @@ function parsebtjunkie(id,data){
    dataarray[index]='<p'+value;
    dataarray[index]= dataarray[index].replace(/strong>/g,'p>').replace(/font>/g,'p>');
    title[index]=$(dataarray[index]).find('a').text();
-   alert($(dataarray[index]).children('p:last').text());
+   alert(dataarray[index]);
    //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
    // alert(dataarray[index]);
    //$(dataarray[index]).children('font').each(function(){
