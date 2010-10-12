@@ -6,7 +6,9 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
  var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
- dataarray=data.split("\<p");
+ alert(data);
+ dataarray=data.split("<p");
+ alert(dataarray);
  for(var t=0;t<dataarray.length;t++){
   dataarray[t]="\<p"+dataarray[t];
   $(dataarray[t]).find('p').each(function(index){
