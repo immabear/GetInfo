@@ -32,7 +32,7 @@ function tab(id){
   case 'searchtasktd':
    var taskbar=document.getElementById(id).parentNode;
    id=document.getElementById(id);
-   $('#searchtags').bind('keypress',function(e){
+   $('#searchtags').keypress(function(){
     alert('Enter key was pressed.');
    });
    break;
