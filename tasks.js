@@ -1,7 +1,7 @@
 var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human error:","1)The script was initiated from an offline xul page (e.g. 'About:Blank') removing domain access.","2)An internet connection is not present.","3)The search query came back empty-handed, and the script threw a tantrum.","4)An unknown error occured, but it's your fault."];
 var hal=["...I'm sorry, Dave, I'm afraid I can't do that."];
 var sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
-$('#searchtags').keyup(function(e) {
+$('#searchtags').bind('keypress',function(e) {
   alert('Enter key was pressed.');
 });
 function fetchPage(id,url,parser,select,xpath){
