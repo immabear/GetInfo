@@ -10,7 +10,7 @@ function parsestagevu(id,data){
  $(data).find('div').each(function(index){
   if($(this).find('div').attr('class')=='searcherror'){
    tablecd="...I'm sorry, Dave, I'm afraid I can't do that.";
-   error(objid.id);
+   error(idobj.id);
   }
   else if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
    $(this).find('img').each(function(){
