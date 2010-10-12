@@ -10,11 +10,10 @@ function parsebtjunkie(id,data){
  $.each(dataarray,function(index, value){
   if(index!==0&&index<5){
    dataarray[index]='<p'+value;
-   $(dataarray[index]).find('a').each(function(){
-    title[index]=$(this).text();
-   });
-   dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
-    alert(dataarray[index]);
+   title[index]=$(dataarray[index]).find('a').text();
+   alert($(dataarray[index]).find('font:nth-child(1)').text());
+   //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
+   // alert(dataarray[index]);
    //$(dataarray[index]).children('font').each(function(){
    // cat[index]=$(this).text();
    // alert(cat[index]);
