@@ -4,7 +4,7 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/p | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
-function parsebtjunkie(id,data){
+function parsebtjunkie1(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
@@ -20,7 +20,7 @@ function parsebtjunkie(id,data){
   }
  });
 }
-function parsebtjunkie1(id,data){
+function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
@@ -44,11 +44,13 @@ function parsebtjunkie1(id,data){
 	  date[index]=val;
 	  break;
      case 3:
-	  seed[index]=val;
+	  if(val&&val!==' ')seed[index]=val;
+	  else seed[index]='X';
 	  leech[index]='X';
 	  break;
      case 4:
-	  leech[index]=val;
+	  if(val&&val!==' ')leech[index]=val;
+	  else leech[index]='X';
 	  break;
 	}
    });
