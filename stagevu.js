@@ -9,7 +9,7 @@ function parsestagevu(id,data){
  idobj.innerHTML='';
  alert(data);
  $(data).find('div').each(function(index){
-  if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
+  if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'||!($(this).find('div[class="searcherror"]').each(function(){return true;}))){
    $(this).find('img').each(function(){
     if($(this).attr('class')=='mvthumb'){
      src[index]=$(this).attr('src');
@@ -60,7 +60,7 @@ function parsestagevu(id,data){
 	'</div>';
    tablecd=tablecd+tablerow;
   }
-  else if($(this).attr('class')=='searcherror'){idobj.innerHTML='Search Complete:\\nNo Videos Found.'};
+  else $(this).find('div[class="searcherror"]').each(function(){idobj.innerHTML='Search Complete:\\nNo Videos Found.';});
  });
  idobj.innerHTML=tablecd;
  aligntd();
