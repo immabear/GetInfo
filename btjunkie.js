@@ -9,7 +9,7 @@ function parsebtjunkie(id,data){
  dataarray=data.split("<p");
  alert(dataarray);
  $.each(dataarray,function(index, value){
-  (this).value='<p'+(this).value);
+  (this).value='<p'+(this).value;
   alert((this)); 
  });
 }
