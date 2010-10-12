@@ -83,7 +83,7 @@ var page="
  }
 </script>
 </head>
-<body onload='aligntd();fetchPage(\"homebox\",\"http://btjunkie.org/search?q=batman&rrr=\"+Math.random(),\"btjunkie\",ClientsS[1],ClientsX[1]);'> //onload='aligntd();fetchPage(\"homebox\",sources[0],\"\",\"*\",\"*\");'
+<body onload='aligntd();fetchPage(\"homebox\",sources[0],\"\",\"*\",\"*\");'>
 <div id='bodydiv'>
  <table id='maintaskbar'>
   <tr id='taskbar'>
