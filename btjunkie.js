@@ -18,10 +18,11 @@ function parsebtjunkie(id,data){
     loc[index]=$(this).attr('href');
 	alert(title[index]+'/n'+loc[index]);
    });
-   $(dataarray[index]).each(function(){alert('testing')});
-   loc[index]=$(dataarray[index]).text().split('|')[0];
-   title[index]=$(dataarray[index]).text().split('|')[0];
-   temp=$(dataarray[index]).text().split('|')[1].split(' ');
+   var temparray=$(dataarray[index]).text();
+   title[index]=temparray.split('|')[0];
+   loc[index]=dataarray[index].replace(/<p.*href="|".*/g,'');
+   alert(loc[index]);
+   temp=temparray.split('|')[1].split(' ');
    $.each(temp,function(i,val){
     switch(i){
 	 case 0:
