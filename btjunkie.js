@@ -8,8 +8,8 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  alert(dataarray);
- for(var t=0;t<dataarray.length;t++){
-  dataarray[t]="<p";
+ for(var t=1;t<dataarray.length;t++){
+  dataarray[t]="<p"+dataarray[t];
  alert(dataarray);
   $(dataarray[t]).find('p').each(function(index){
    title[index]=$(this).text();
