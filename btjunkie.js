@@ -7,10 +7,11 @@ ClientsX[1]=
 function parsebtjunkie(id,data){
  var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
- alert(dataarray);
  $.each(dataarray,function(index, value){
-  (this).value='<p'+(this).value;
-  alert((this)); 
+  if(index!==0&&index<10){
+   dataarray[index]='<p'+value;
+   alert(dataarray[index]); 
+  }
  });
 }
 function parseparseparse(){
