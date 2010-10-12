@@ -17,7 +17,6 @@ function parsebtjunkie(id,data){
    });
    temp=$(dataarray[index]).text().split('|')[1].split(' ');
    $.each(temp,function(i,val){
-    alert(i+': '+val);
     switch(i){
 	 case 0:
 	  cat[index]=val;
@@ -75,7 +74,7 @@ function parsebtjunkie(id,data){
  });
  document.getElementById(id).innerHTML=tablecd;
  aligntd();
- $('#homebox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
 }
 function parsebtjunkie1(id,data){
