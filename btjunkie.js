@@ -13,15 +13,14 @@ function parsebtjunkie(id,data){
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    alert(dataarray[index]);
    $(dataarray[index]).find('a').each(function(){
+    alert('test');
     title[index]=this.text();
     loc[index]=$(this).attr('href');
 	alert(title[index]+'/n'+loc[index]);
    });
-   $(dataarray[index]).each(function(){
-   loc[index]=$(this).text().split('|')[0];
-   title[index]=$(this).text().split('|')[0];
-   temp=$(this).text().split('|')[1].split(' ');
-   });
+   loc[index]=$(dataarray[index]).text().split('|')[0];
+   title[index]=$(dataarray[index]).text().split('|')[0];
+   temp=$(dataarray[index]).text().split('|')[1].split(' ');
    $.each(temp,function(i,val){
     switch(i){
 	 case 0:
