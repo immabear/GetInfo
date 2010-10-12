@@ -8,7 +8,7 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], seed=[], leech=[], size=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("\<p");
  for(var t=0;t<dataarray.length;t++){
-  dataarray[t]="<p"+dataarray[t];
+  dataarray[t]="\<p"+dataarray[t];
   $(dataarray[t]).find('p').each(function(index){
    title[index]=$(this).text();
    loc[index]=$(this).attr('href');
