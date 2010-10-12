@@ -1,6 +1,6 @@
 function parse(id,data){
- var src=[]; var alt=[]; var com=[];var tablerow; var tablecd='';
- document.getElementById(id).innerHTML='';
+ var src=[], alt=[], com=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ idobj.innerHTML='';
  $(data).find('div').each(function(index){
   if($(this).attr('class')=='movie'){
    $(this).find('img').each(function(){
@@ -36,7 +36,9 @@ function parse(id,data){
    tablecd=tablecd+tablerow;
    }
  });
- document.getElementById(id).innerHTML=tablecd;
+ idobj.innerHTML=tablecd;
  aligntd();
- $('#homebox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
+ $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ var src=[], alt=[], com=[], tablerow, tablecd='';
 }
