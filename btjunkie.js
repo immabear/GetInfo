@@ -10,8 +10,8 @@ function parsebtjunkie(id,data){
  $.each(dataarray,function(index, value){
   if(index!==0&&index<10){
    dataarray[index]='<p'+value;
-   $(dataarray[index]).find('p').each(function(){
     alert(index);
+   $(dataarray[index]).find('p').each(function(){
     title[index]=$(this).text();
 	alert(title[index]);
    });
