@@ -8,9 +8,9 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-6)&&index<3){
+  if(index!==0&&index<((dataarray.length)-6)){
    dataarray[index]='<p'+value;
-   dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>').replace(/strong>|font>/,'p>');
+   dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>').replace(/strong>|font>/g,'p>');
    alert(dataarray[index]);
   }
  });
