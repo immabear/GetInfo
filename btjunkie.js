@@ -11,7 +11,7 @@ function parsebtjunkie(id,data){
   if(index!==0){
    dataarray[index]='<p'+value;
    $(dataarray[index]).find('p').each(function(){
-    title[index]=$(this).text();
+    title[index]=(this).text();
 	alert(title[index]);
    });
   }
