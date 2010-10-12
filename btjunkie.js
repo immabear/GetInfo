@@ -14,10 +14,10 @@ function parsebtjunkie(id,data){
    $(dataarray[index]).find('a').each(function(){
     title[index]=$(this).text();
    });
-   $(dataarray[index]).find('strong').each(function(){
-    cat[index]=$(this).innerHTML;
+   $(dataarray[index]).children('strong').each(function(){
+    cat[index]=$(this).text();
+    alert(cat[index]);
    });
-   alert(title[index]+'\n'+cat[index]+'\n')
   }
  });
 }
