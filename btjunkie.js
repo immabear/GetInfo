@@ -11,6 +11,7 @@ function parsebtjunkie(id,data){
   if(index!==0&&index<((dataarray.length)-6)){ //index<((dataarray.length)-3)
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
+   alert(dataarray[index]);
    $(dataarray[index]).find('a').each(function(){
     title[index]=this.text();
     loc[index]=$(this).attr('href');
