@@ -12,13 +12,16 @@ function parsebtjunkie(id,data){
    dataarray[index]='<p'+value;
    dataarray[index]= dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>');//.replace(/strong>/g,'p>').replace(/font>/g,'p>');
    alert(dataarray[index]);
-   title[index]=$(dataarray[index]).find('a').text();
+   $(dataarray[index]).find('a').each(function(){
+   title[index]=this.text();
+   title[index]=$(this).attr('href');
+   });
    //dataarray[index]=($(dataarray[index]).text().replace($(dataarray[index]).find('p').text(),'')).split(' ');
    // alert(dataarray[index]);
-   //$(dataarray[index]).children('font').each(function(){
-   // cat[index]=$(this).text();
-   // alert(cat[index]);
-   //});
+   $(dataarray[index]).children('font').each(function(){
+    cat[index]=$(this).text();
+    alert(cat[index]);
+   });
   }
  });
 }
