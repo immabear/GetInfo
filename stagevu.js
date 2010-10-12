@@ -9,7 +9,7 @@ function parsestagevu(id,data){
  idobj.innerHTML='';
  alert(data);
  $(data).find('div').each(function(index){
-  if ($(this).find('div[class="searcherror"]'))idobj.innerHTML='Search Complete:\\nNo Videos Found.';
+  if ($(this).div.attr('class')=='searcherror')idobj.innerHTML='Search Complete:\\nNo Videos Found.';
   else if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
    $(this).find('img').each(function(){
     if($(this).attr('class')=='mvthumb'){
