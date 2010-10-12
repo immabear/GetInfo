@@ -20,7 +20,7 @@ function parsebtjunkie(id,data){
    });
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|')[0];
-   loc[index]=dataarray[index].replace(/<p.*href="/g,'').replace(/".*/g,'');
+   loc[index]=dataarray[index].replace(/<p.*href=\"/g,'').replace(/\".*/g,'');
    alert(loc[index]);
    temp=temparray.split('|')[1].split(' ');
    $.each(temp,function(i,val){
