@@ -7,15 +7,8 @@ ClientsX[1]=
 function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
- alert(dataarray[dataarray.length-1]);
- alert(dataarray[dataarray.length-2]);
- alert(dataarray[dataarray.length-3]);
- alert(dataarray[dataarray.length-4]);
- alert(dataarray[dataarray.length-5]);
- alert(dataarray[dataarray.length-6]);
- alert(dataarray[dataarray.length-7]);
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-4)){ //index<((dataarray.length)-3)
+  if(index!==0&&index<((dataarray.length)-6)){ //index<((dataarray.length)-3)
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    $(dataarray[index]).find('a').each(function(){
