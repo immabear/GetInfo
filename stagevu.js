@@ -5,8 +5,8 @@ ClientsU[0]="html~http://stagevu.com/search?for=|&in=Videos";
 ClientsS[0]="*";
 ClientsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
- var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='';
- document.getElementById(id).innerHTML='';
+ var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='', idobj=document.getElementById(id);
+ idobj.innerHTML='';
  $(data).find('div').each(function(index){
   if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
    $(this).find('img').each(function(){
@@ -59,11 +59,11 @@ function parsestagevu(id,data){
 	'</div>';
    tablecd=tablecd+tablerow;
   }
-  else if($(this).attr('class')=='searcherror'){document.getElementById(id).innerHTML='Search Complete:\\nNo Videos Found.'};
+  else if($(this).attr('class')=='searcherror'){idobj.innerHTML='Search Complete:\\nNo Videos Found.'};
  });
- document.getElementById(id).innerHTML=tablecd;
+ idobj.innerHTML=tablecd;
  aligntd();
- $('#searchbox div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='';
 }
 function downloadstagevu(loc){

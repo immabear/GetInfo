@@ -4,22 +4,6 @@ ClientsX[1]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/p | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
-function parsebtjunkie1(id,data){
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
- dataarray=data.split("<p");
- $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-6)&&index<3){
-   dataarray[index]='<p'+value;
-   dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>').replace(/strong>|font>/g,'p>');
-   $(dataarray[index]).find('a').each(function(){
-    alert('found a');
-   });
-   $(dataarray[index]).find('p').each(function(){
-    alert('found p');
-   });
-  }
- });
-}
 function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<p");
@@ -27,7 +11,6 @@ function parsebtjunkie(id,data){
   if(index!==0&&index<((dataarray.length)-6)){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|||');
-   alert(dataarray[index]);
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|||')[0];
    loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
