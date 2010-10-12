@@ -66,6 +66,7 @@ function parsestagevu(id,data){
  });
  idobj.innerHTML=tablecd;
  aligntd();
+ $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='';
 }
