@@ -11,9 +11,9 @@ function parsebtjunkie(id,data){
   if(index!==0&&index<5){
    dataarray[index]='<p'+value;
     alert(dataarray[index]);
-   $(dataarray[index]).find('a').each(function(){
-    title[index]=$(this).text();
-   });
+   //$(dataarray[index]).find('a').each(function(){
+    //title[index]=$(this).text();
+   //});
    $(dataarray[index]).children('font').each(function(){
     cat[index]=$(this).text();
     alert(cat[index]);
