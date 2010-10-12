@@ -35,6 +35,7 @@ function error(id){
 function tab(id){
  switch(id){
   case 'searchtasktd':
+   $('#searchtags').focus();
    var taskbar=document.getElementById(id).parentNode;
    id=document.getElementById(id);
    break;
