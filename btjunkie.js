@@ -12,7 +12,7 @@ function parsebtjunkie(id,data){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|');
    alert(dataarray[index]);
-   $(dataarray[index]).find('a').each(function(){
+   $(dataarray[index]).find(:nth-child(1)).each(function(){
     alert('test');
     title[index]=this.text();
     loc[index]=$(this).attr('href');
