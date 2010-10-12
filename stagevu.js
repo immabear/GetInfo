@@ -7,6 +7,7 @@ ClientsX[0]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
  var src=[]; var alt=[]; var desc=[]; var com=[]; var loc=[]; var lng=[]; var tablerow; var tablecd='', idobj=document.getElementById(id);
  idobj.innerHTML='';
+ idobj.innerHTML=data;
  $(data).find('div').each(function(index){
   if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
    $(this).find('img').each(function(){
