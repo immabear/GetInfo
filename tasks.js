@@ -7,7 +7,7 @@ $('#searchtags').live('keypress',function(e){
  }
 });
 function fetchPage(id,url,parser,select,xpath){
- document.getElementById(id).innerHTML='<img src="http://www.ucmusicgroup.com/contents/misc/loading.gif" style="width:748px;height:488px"/>';
+ document.getElementById(id).innerHTML='<img src="http://www.carsponsors.com/images/loading_transparent.gif" style="width:748px;height:488px"/>';
  $.ajax({
   select: select,
   xpath: xpath,
