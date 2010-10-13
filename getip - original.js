@@ -1,8 +1,6 @@
 function Retriever(){
-var Cs=["stagevu","btjunkie","debug"],
-CsS=[], CsC=[], CsD=[], CsC2=[], CsSC=[],
-Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"],
-DbS=[];
+var Cs=["stagevu","btjunkie","debug"], CsS=[], CsC=[], CsD=[], CsC2=[], CsSC=[],
+Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"], DbS=[];
 String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
 for(var t=0;t<Cs.length;t++){
  CsS[t]='<script src="'+Db[0]+Cs[t]+'.js"></script>';
@@ -136,5 +134,6 @@ var page="
 <div id='searchframe' style='display:none'></div>
 </body>
 </html>";
+var CsS=[], CsC=[], CsD=[], CsC2=[], CsSC=[], DbS=[];
 return page;
 }
