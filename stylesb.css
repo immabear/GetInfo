@@ -116,8 +116,6 @@ button:hover{
 	background: #AAAAAA;
 	background: -moz-linear-gradient(center top, #D1D5EE 0%,#EEF2FF 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D1D5EE),color-stop(1, #EEF2FF));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D1D5EE', endColorstr='#EEF2FF');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D1D5EE', endColorstr='#EEF2FF')";
 	margin:10px;
 	margin-bottom:0px;
 	margin-right:0px;
