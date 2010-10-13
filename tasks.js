@@ -7,7 +7,7 @@ $('#searchtags').live('keypress',function(e){
  }
 });
 function fetchPage(id,url,parser,select,xpath){
- document.getElementById(id).innerHTML='<img src="http://github.com/immabear/GetInfo/raw/master/loading.gif" style="width:748px;height:488px"/>';
+ document.getElementById(id).innerHTML='<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader.gif" style="width:748px;height:488px"/>';
  $.ajax({
   select: select,
   xpath: xpath,
