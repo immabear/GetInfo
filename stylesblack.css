@@ -4,11 +4,11 @@ html,body{
 }
 
 div{
-	border:2px solid #AAAAAA;
+	border:2px solid #FFFFFF;
 }
 
 td{
-	border:2px solid #AAAAAA;
+	border:2px solid #FFFFFF;
 }
 
 option,select{
@@ -37,11 +37,11 @@ button:hover{
 }
 
 .right{
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .left{
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .middle{
@@ -49,11 +49,11 @@ button:hover{
 }
 
 .farright{
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .farleft{
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .resultimg, .resultimgsm{
@@ -99,14 +99,14 @@ button:hover{
 }
 
 #fillertasktd{
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 #homebox,#searchbox{
 	color:black;
 	background: #000000;
-	background: -moz-linear-gradient(center top, #E0E4F7 0%,#D6DAF0 25%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E0E4F7),color-stop(.25, #D6DAF0));
+	background: -moz-linear-gradient(center top, #5A5A5A 0%,#AAAAAA 25%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5A5A5A),color-stop(.25, #AAAAAA));
 }
 
 #search{
