@@ -124,7 +124,7 @@ var page="
   <table id='infotaskbar'>
    <tr>
     <td id='infobox' onclick='tab(this)'>
-     GET: INFO by IMMABEAR<br><br><br><br><br><br><br><br>Version: 1.00 (10/08/2010)<br><button onclick='alert(\"Nope.\")'>Update</button>
+     GET: INFO by IMMABEAR<br>Version: 1.00 (10/08/2010)
     </td>
    </tr>
   </table>
