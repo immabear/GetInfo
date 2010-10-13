@@ -45,7 +45,6 @@ var page="
 <meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
 <link rel='shortcut icon' href='"+Db[0]+"favicon.jpg'/>
 <link rel='stylesheet' type='text/css' href='"+Db[0]+"stylesb.css'/>
-<link rel='stylesheet' type='text/css' href='http://github.com/immabear/GetInfo/raw/master/stylesblack.css'/>
 <title>\u22D8GET: INFO\u22D9 by IMMABEAR</title>
 <script src=\"http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js\"></script>
 "+DbS.join(' ')+CsS.join(' ')+"
