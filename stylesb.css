@@ -306,7 +306,7 @@ button:hover{
 }
 
 #background{
-	background: #D1D5EE;y
+	background: #D1D5EE;
 	background: -moz-linear-gradient(center top, #D1D5EE 0%,#EEF2FF 25%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D1D5EE),color-stop(.25, #EEF2FF));
 }

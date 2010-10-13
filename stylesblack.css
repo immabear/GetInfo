@@ -1,0 +1,140 @@
+html,body{
+	color:#000000;
+	background:#000000;
+}
+
+div{
+	border:2px solid #AAAAAA;
+}
+
+td{
+	border:2px solid #AAAAAA;
+}
+
+option,select{
+	background:#000000;
+}
+
+button{
+	color:#000000;
+	background: #000000;
+	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #AAAAAA));
+} 
+
+button:hover{
+	color:#000000;
+	background: #000000;
+	background: -moz-linear-gradient(center top, #AAAAAA 0%,#000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AAAAAA),color-stop(1, #000000));
+}
+
+.activebutton{
+	color:#000000;
+	background: #000000;
+	background: -moz-linear-gradient(center top, #AAAAAA 0%,#A9DBF6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AAAAAA),color-stop(1, #A9DBF6));
+}
+
+.right{
+	border-bottom:2px solid #AAAAAA;
+}
+
+.left{
+	border-bottom:2px solid #AAAAAA;
+}
+
+.middle{
+	border-bottom:2px solid transparent;
+}
+
+.farright{
+	border-bottom:2px solid #AAAAAA;
+}
+
+.farleft{
+	border-bottom:2px solid #AAAAAA;
+}
+
+.resultimg, .resultimgsm{
+	background: #AAAAAA;
+	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #AAAAAA));
+}
+
+.tooltip,.tooltipbig  {
+	color:white;
+}
+
+.tooltip {
+	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow.png);
+}
+
+.tooltip table {
+	color:white;
+}
+
+.tooltipbig {
+	background:transparent url(http://github.com/immabear/GetInfo/raw/master/black_arrow_big.png);
+}
+
+.tooltipbig table {
+	color:white;
+}
+
+.comoverlap {
+	color:white;
+	background-color: rgba(34, 34, 34, .5);
+}
+
+#bodydiv{
+	background:#AAAAAA;
+	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 25%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(.25, #AAAAAA));
+	color:black;
+}
+
+#home{
+	color:black;
+}
+
+#fillertasktd{
+	border-bottom:2px solid #AAAAAA;
+}
+
+#homebox,#searchbox{
+	color:black;
+	background: #000000;
+	background: -moz-linear-gradient(center top, #E0E4F7 0%,#D6DAF0 25%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E0E4F7),color-stop(.25, #D6DAF0));
+}
+
+#search{
+	color:black;
+}
+
+#searchtype{
+	color:black;
+	background-color:transparent;
+}
+
+#searchtags{
+	color:black;
+	background: #000000;
+	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #AAAAAA));
+}
+
+#info{
+	color:black;
+}
+
+#infobox{
+	color:black;
+}
+
+#background{
+	background: #000000;
+	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 25%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(.25, #AAAAAA));
+}
