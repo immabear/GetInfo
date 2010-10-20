@@ -1,7 +1,7 @@
 var CN=CN+1;
 CsU[CN]="html~http://www.nyaatorrents.org/?page=search&cat=0_0&filter=0&term=|";
 CsS[CN]="*";
-CsX[CN]='*';
+CsX[CN]='//table[@class="tlist"]/tr[@class!="tlisthead"]';
 function parsenyaatorrents(id,data){
  var idobj=document.getElementById(id);
  idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
