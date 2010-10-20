@@ -12,9 +12,9 @@ function parsenyaatorrents(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<tr");
  $.each(dataarray,function(index, value){
-  if(index<5){
-  dataarray[index]='<tr'+value;
-  alert(dataarray[index]);
+  if(index!==0&&index<5){
+   dataarray[index]='<tr'+value;
+   alert(dataarray[index]);
   }
  });
 }
