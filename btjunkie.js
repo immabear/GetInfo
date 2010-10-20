@@ -1,6 +1,7 @@
-CsU[1]="html~http://btjunkie.org/search?q=|";
-CsS[1]='a, content';
-CsX[1]=
+var CN=CN+1;
+CsU[CN]="html~http://btjunkie.org/search?q=|";
+CsS[CN]='a, content';
+CsX[CN]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/p | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';

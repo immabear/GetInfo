@@ -1,8 +1,13 @@
-var CsU=[], CsS=[], CsX=[], CN=0;
-CsU[CN]="html~http://stagevu.com/search?for=|&in=Videos";
+var CN=CN+1;
+CsU[CN]="html~http://www.nyaatorrents.org/?page=search&cat=0_0&filter=0&term=|";
 CsS[CN]="*";
-CsX[CN]='//div[@id="resultsbox1"]';
-function parsestagevu(id,data){
+CsX[CN]='*';
+function parsenyaatorrents(id,data){
+ var idobj=document.getElementById(id);
+ idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
+ idobj.style.display='';
+}
+function parsenyaatorrents1(id,data){
  var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='', idobj=document.getElementById(id);
  idobj.innerHTML='';
  $(data).find('div').each(function(index){
