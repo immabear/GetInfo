@@ -2,68 +2,89 @@ var CN=CN+1;
 CsU[CN]="html~http://www.nyaatorrents.org/?page=search&cat=0_0&filter=0&term=|";
 CsS[CN]="*";
 CsX[CN]='//table[@class="tlist"]/tr[@class!="tlisthead"]';
-function parsenyaatorrents(id,data){
+function parsenyaatorrents0(id,data){
  var idobj=document.getElementById(id);
  idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
  idobj.style.display='';
 }
-function parsenyaatorrents1(id,data){
- var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='', idobj=document.getElementById(id);
- idobj.innerHTML='';
- $(data).find('div').each(function(index){
-  if($(this).find('div').attr('class')=='searcherror'){
-   tablecd="...I'm sorry, Dave, I'm afraid I can't do that.";
-   error(idobj.id);
+
+function parsenyaatorrents(id,data){
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ dataarray=data.split("<tr");
+ $.each(dataarray,function(index, value){
+  if(index<5){
+  dataarray[index]='<tr'+value;
+  alert(dataarray[index]);
   }
-  else if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
-   $(this).find('img').each(function(){
-    if($(this).attr('class')=='mvthumb'){
-     src[index]=$(this).attr('src');
-    }
-	else{
-	 com[index]=$(this).attr('alt');
-	 return false;
+ });
+}
+
+function parsebtjunkie00(id,data){
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ dataarray=data.split("<p");
+ $.each(dataarray,function(index, value){
+  if(index!==0&&index<((dataarray.length)-6)){
+   dataarray[index]='<p'+value;
+   dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|||');
+   var temparray=$(dataarray[index]).text();
+   title[index]=temparray.split('|||')[0];
+   loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
+   temp=temparray.split('|||')[1].split(' ');
+   $.each(temp,function(i,val){
+    switch(i){
+	 case 0:
+	  cat[index]=val;
+	  break;
+     case 1:
+	  size[index]=val;
+	  break;
+     case 2:
+	  date[index]=val;
+	  break;
+     case 3:
+	  if(val&&val!==' ')seed[index]=val;
+	  else seed[index]='X';
+	  leech[index]='X';
+	  break;
+     case 4:
+	  if(val&&val!==' ')leech[index]=val;
+	  else leech[index]='X';
+	  break;
 	}
    });
-   $(this).find('h2').each(function(){
-     $(this).find('a').each(function(){
-	  alt[index]=$(this).text();
-	  loc[index]=$(this).attr('href');
-	  loc[index]=loc[index].split('/')[4];
-	 });
-   });
-   $(this).find('p').each(function(){
-	desc[index]=$(this).text();
-	return false;
-   });
-   $(this).find('div').each(function(){
-    if($(this).attr('class')=='floatright'){
-	 lng[index]=$(this).html();
-	 lng[index]=lng[index]+'';
-     lng[index]=lng[index].split('>')[7];
-     lng[index]=lng[index].split('\;')[0];
-	}
-   });
-   com[index]='<table><tr><td class="comoverlap">'+com[index]+'/5 Stars | Length: '+lng[index]+'</td></tr></table>';
+   com[index]=
+   '<table>'+
+    '<tr>'+
+     '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Size: '+size[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Category: '+cat[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Date: '+date[index]+'</td>'+
+    '</tr>'+
+   '</table>';
    tablerow=
-    '<div id="result'+index+'" class="resultimgsm" style="background:url('+src[index]+')">'+
-	 com[index]+
-	'</div>'+
-	'<div class="tooltipbig">'+
-	 '<table>'+
-	  '<tr>'+
-	   '<td><b id="searchresult'+index+'">'+alt[index]+'</b><br>'+
-	    desc[index]+
-	   '</td>'+
+    '<div id="result'+index+'" class="resultimgsm">'+
+     com[index]+
+    '</div>'+
+    '<div class="tooltipbig">'+
+     '<table>'+
+      '<tr>'+
+       '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+ 
+       '</td>'+
 	  '</tr>'+
 	  '<tr>'+
 	   '<td style="height:30px">'+
 	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
-	    '<button onclick="downloadstagevu(\''+loc[index]+'\');" class="buttonbig">View/Download</button>'+
+	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+
-	'</div>';
+    '</div>';
    tablecd=tablecd+tablerow;
   }
  });
@@ -71,10 +92,5 @@ function parsenyaatorrents1(id,data){
  aligntd();
  $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='';
-}
-function downloadstagevu(loc){
- minmaximize(0);
- document.getElementById('searchframe').innerHTML="<iframe style='overflow:hidden;border:0;width:100%;height:100%' src='http://stagevu.com/embed?width=780&amp;height=600&amp;background=transparent&amp;uid="+loc+"'scrolling='no'></iframe>";
- $("#searchframe").show(600);
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
 }
