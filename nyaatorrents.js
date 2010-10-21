@@ -20,7 +20,7 @@ function parsenyaatorrents(id,data){
 	  $(this).find('a').each(function(){cat[index]=$(this).attr('href')});
 	  break;
 	 case 'tlistname':
-	  title[index]=$(this).text();
+	  $(this).find('a').each(function(){title[index]=$(this).attr('title')});
 	  break;
 	 case 'tlistdownload':
 	  $(this).find('a').each(function(){loc[index]=$(this).attr('href')});
