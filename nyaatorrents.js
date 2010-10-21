@@ -39,7 +39,10 @@ function parsenyaatorrents(id,data){
 	  break;
 	}
    });
-   alert(cat[index]+'\n'+title[index]+'\n'+loc[index]+'\n'+size[index]+'\n'+seed[index]+'\n'+leech[index]+'\n'+dls[index]+'\n');
+   var ddd=cat[index]+'\n'+title[index]+'\n'+loc[index]+'\n'+size[index]+'\n'+seed[index]+'\n'+leech[index]+'\n'+dls[index]+'\n';
+   idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+ddd+'</textarea>';
+   idobj.style.display='';
+   alert('');
   }
  });
 }
