@@ -50,6 +50,9 @@ function parsenyaatorrents(id,data){
     '<tr>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
     '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap"><img src="'+cat[index]+'"/></td>'+
+    '</tr>'+
    '</table>';
    tablerow=
     '<div id="result'+index+'" class="resultimgsm">'+
