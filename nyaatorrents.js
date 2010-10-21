@@ -23,7 +23,7 @@ function parsenyaatorrents(id,data){
 	  $(this).find('a').each(function(){title[index]=$(this).attr('title')});
 	  break;
 	 case 'tlistdownload':
-	  $(this).find('a').each(function(){loc[index]=$(this).attr('href')});
+	  $(this).find('img').each(function(){loc[index]=$(this).attr('href')});
 	  break;
 	 case 'tlistsize':
 	  size[index]=$(this).find('p').text();
@@ -49,7 +49,7 @@ function parsenyaatorrents(id,data){
      '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
-     '<td class="comoverlap">'+cat[index]+'</td>'+
+     '<td class="comoverlap"><img src="'+cat[index]+'"/></td>'+
     '</tr>'+
    '</table>';
    tablerow=
