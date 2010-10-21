@@ -9,7 +9,7 @@ function parsenyaatorrents0(id,data){
 }
 
 function parsenyaatorrents(id,data){
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], dls=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], dls=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<tr");
  $.each(dataarray,function(index, value){
   if(index!==0&&index<5){
@@ -39,12 +39,44 @@ function parsenyaatorrents(id,data){
 	  break;
 	}
    });
-   var ddd=cat[index]+'\n'+title[index]+'\n'+loc[index]+'\n'+size[index]+'\n'+seed[index]+'\n'+leech[index]+'\n'+dls[index]+'\n';
-   idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+ddd+'</textarea>';
-   idobj.style.display='';
-   alert('');
+   com[index]=
+   '<table>'+
+    '<tr>'+
+     '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Size: '+size[index]+'</td>'+
+    '</tr>'+
+    '<tr>'+
+     '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
+    '</tr>'+
+   '</table>';
+   tablerow=
+    '<div id="result'+index+'" class="resultimgsm">'+
+     com[index]+
+    '</div>'+
+    '<div class="tooltipbig">'+
+     '<table>'+
+      '<tr>'+
+       '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+ 
+       '</td>'+
+	  '</tr>'+
+	  '<tr>'+
+	   '<td style="height:30px">'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
+	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
+	   '</td>'+
+	  '</tr>'+
+	 '</table>'+
+    '</div>';
+   tablecd=tablecd+tablerow;
   }
  });
+ idobj.innerHTML=tablecd;
+ aligntd();
+ $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
+ $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], dls=[], tablerow, tablecd='';
 }
 
 function parsebtjunkie00(id,data){
