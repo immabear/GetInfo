@@ -12,7 +12,7 @@ function parsenyaatorrents(id,data){
  var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], dls=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<tr");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<5){
+  if(index!==0){
    dataarray[index]='<tr'+value;
    $(dataarray[index]).find('td').each(function(){
     switch($(this).attr('class')){
@@ -53,7 +53,7 @@ function parsenyaatorrents(id,data){
     '</tr>'+
    '</table>';
    tablerow=
-    '<div id="result'+index+'" class="resultimgsm" style="width:680px;height:40px">'+
+    '<div id="result'+index+'" class="resultimgsm" style="width:690px;height:40px">'+
      com[index]+
     '</div>'+
     '<div class="tooltipbig">'+
