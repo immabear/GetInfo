@@ -38,8 +38,8 @@ function parsenyaatorrents(id,data){
 	  dls[index]=$(this).text();
 	  break;
 	}
-    alert(cat[index]+'\n'+title[index]+'\n'+loc[index]+'\n'+size[index]+'\n'+seed[index]+'\n'+leech[index]+'\n'+dls[index]+'\n');
    });
+   alert(cat[index]+'\n'+title[index]+'\n'+loc[index]+'\n'+size[index]+'\n'+seed[index]+'\n'+leech[index]+'\n'+dls[index]+'\n');
   }
  });
 }
