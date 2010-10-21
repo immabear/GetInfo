@@ -26,16 +26,16 @@ function parsenyaatorrents(id,data){
 	  $(this).find('a').each(function(){loc[index]=$(this).attr('href')});
 	  break;
 	 case 'tlistsize':
-	  size[index]=$(this).text();
+	  size[index]=$(this).find('p').text();
 	  break;
 	 case 'tlistsn':
-	  seed[index]=$(this).text();
+	  seed[index]=$(this).find('p').text();
 	  break;
 	 case 'tlistln':
-	  leech[index]=$(this).text();
+	  leech[index]=$(this).find('p').text();
 	  break;
 	 case 'tlistcn':
-	  dls[index]=$(this).text();
+	  dls[index]=$(this).find('p').text();
 	  break;
 	}
    });
