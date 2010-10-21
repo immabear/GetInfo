@@ -42,14 +42,14 @@ function parsenyaatorrents(id,data){
    com[index]=
    '<table>'+
     '<tr>'+
-     '<td class="comoverlap" colspan="5">'+title[index]+'</td>'+
+     '<td class="comoverlap" colspan="4">'+title[index]+'</td>'+
+     '<td class="comoverlap" rowspan="2">'+cat[index]+'</td>'+
     '</tr>'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+'</td>'+
      '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
-     '<td class="comoverlap">'+cat[index]+'</td>'+
     '</tr>'+
    '</table>';
    tablerow=
