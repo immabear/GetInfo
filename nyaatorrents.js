@@ -40,9 +40,9 @@ function parsenyaatorrents(id,data){
 	}
    });
    com[index]=
-   '<table>'+
+   '<table style="table-layout:fixed">'+
     '<tr>'+
-     '<td class="comoverlap" colspan="4" style="height:10px;width:630px;overflow:hidden">'+title[index]+'</td>'+
+     '<td class="comoverlap" colspan="4" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis">'+title[index]+'</td>'+
      '<td class="comoverlap" rowspan="2" style="width:80px;background:url('+cat[index]+')"> </td>'+
     '</tr>'+
     '<tr>'+
