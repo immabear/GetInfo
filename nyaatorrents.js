@@ -53,7 +53,7 @@ function parsenyaatorrents(id,data){
     '</tr>'+
    '</table>';
    tablerow=
-    '<div id="result'+index+'" class="resultimgsm" style="width:680px">'+
+    '<div id="result'+index+'" class="resultimgsm" style="width:680px;height:40px">'+
      com[index]+
     '</div>'+
     '<div class="tooltipbig">'+
