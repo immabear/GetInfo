@@ -17,13 +17,13 @@ function parsenyaatorrents(id,data){
    $(dataarray[index]).find('td').each(function(){
     switch($(this).attr('class')){
 	 case 'tlisticon':
-	  cat[index]=$(this).html();
+	  $(this).find('a').each(function(){cat[index]=$(this).attr('href')});
 	  break;
 	 case 'tlistname':
-	  title[index]=$(this).html();
+	  title[index]=$(this).text();
 	  break;
 	 case 'tlistdownload':
-	  loc[index]=$(this).text();
+	  $(this).find('a').each(function(){loc[index]=$(this).attr('href')});
 	  break;
 	 case 'tlistsize':
 	  size[index]=$(this).text();
