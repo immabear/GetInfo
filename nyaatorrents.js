@@ -49,7 +49,7 @@ function parsenyaatorrents(id,data){
      '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
-     '<td class="comoverlap"><img src="'+cat[index]+'"/></td>'+
+     '<td class="comoverlap">'+cat[index]+'</td>'+
     '</tr>'+
    '</table>';
    tablerow=
