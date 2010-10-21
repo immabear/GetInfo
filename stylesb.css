@@ -133,6 +133,7 @@ button:hover{
 }
 
 .resultimg table, .resultimgsm table{
+	table-layout:fixed;
 	border-spacing:2px;
 	margin:0;
 	width:100%;
