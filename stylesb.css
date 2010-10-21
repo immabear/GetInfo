@@ -196,6 +196,8 @@ button:hover{
 	color:white;
 	text-shadow: 2px 2px 2px #222222;
 	background-color: rgba(34, 34, 34, .5);
+	overflow:hidden;
+	text-overflow:ellipsis;
  	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
