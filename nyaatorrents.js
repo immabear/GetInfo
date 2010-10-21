@@ -9,12 +9,37 @@ function parsenyaatorrents0(id,data){
 }
 
 function parsenyaatorrents(id,data){
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], dls=[], tablerow, tablecd='', idobj=document.getElementById(id);
  dataarray=data.split("<tr");
  $.each(dataarray,function(index, value){
   if(index!==0&&index<5){
    dataarray[index]='<tr'+value;
-   alert(dataarray[index]);
+   $(dataarray[index]).find('td').each(function(){
+    switch($(this).attr('class')){
+	 case 'tlisticon':
+	  cat[index]=$(this).html();
+	  break;
+	 case 'tlistname':
+	  title[index]=$(this).html();
+	  break;
+	 case 'tlistdownload':
+	  loc[index]=$(this).text();
+	  break;
+	 case 'tlistsize':
+	  size[index]=$(this).text();
+	  break;
+	 case 'tlistsn':
+	  seed[index]=$(this).text();
+	  break;
+	 case 'tlistln':
+	  leech[index]=$(this).text();
+	  break;
+	 case 'tlistcn':
+	  dls[index]=$(this).text();
+	  break;
+	}
+    alert(cat[index]+'\n'+title[index]+'\n'+loc[index]+'\n'+size[index]+'\n'+seed[index]+'\n'+leech[index]+'\n'+dls[index]+'\n');
+   });
   }
  });
 }
