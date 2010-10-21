@@ -42,7 +42,7 @@ function parsenyaatorrents(id,data){
    com[index]=
    '<table>'+
     '<tr>'+
-     '<td class="comoverlap">'+title[index]+'</td>'+
+     '<td class="comoverlap" rowspan="5">'+title[index]+'</td>'+
     '</tr>'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+'</td>'+
