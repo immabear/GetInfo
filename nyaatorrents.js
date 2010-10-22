@@ -43,7 +43,9 @@ function parsenyaatorrents(id,data){
    '<table>'+
     '<tr>'+
      '<td class="comoverlap" colspan="4" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+title[index]+'</td>'+
-     '<td class="comoverlap" rowspan="2" style="width:80px;background:url('+cat[index]+')"> </td>'+
+     '<td class="comoverlap" rowspan="2" style="width:80px;border:0">'+
+	  '<div style="width:80px;height:100%;border:2px solid #AAAAAA;background:url('+cat[index]+')"> </div>'+
+	 '</td>'+
     '</tr>'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+'</td>'+
