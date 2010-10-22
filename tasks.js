@@ -31,10 +31,9 @@ function error(id){
  alert(humanerror.join('\n'));
 }
 function tab(id){
- var taskbar=document.getElementById(id).parentNode;
  $("#"+id).attr("class","middle");
  $("#"+id+" button").addClass('activebutton');
- $("#"+taskbar.id+" td[class]").each(function(){
+ $("#"+$('#'+id+':parent').attr('id')+" td[class]").each(function(){
   if((this).cellIndex!==id.cellIndex){
    $(this).find("button").removeClass('activebutton');
   }
