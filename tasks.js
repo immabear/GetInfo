@@ -62,7 +62,7 @@ function tab(id){
 };
 function show(id,idbox){
  var divs=document.getElementsByTagName('div');
- $("#bodydiv").css("display","");
+ $("#bodydiv").children().css("display","none");
  if(idbox)document.getElementById(idbox).style.display='';
 }
 function minmaximize(x){
