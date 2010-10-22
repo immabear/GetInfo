@@ -63,7 +63,7 @@ function tab(id){
 function show(id,idbox){
  var divs=document.getElementsByTagName('div');
  for(var t=0;t<divs.length;t++){
-  if(divs[t].id!=='bodydiv'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'&&divs[t].id!=='background')divs[t].style.display='none';
+  if(divs[t].id!=='bodydiv'&&divs[t].className!=='resultimg'&&divs[t].className!=='resultimgsm'&&divs[t].className!=='nohide'&&divs[t].id!=='background')divs[t].style.display='none';
  }
  document.getElementById(id).style.display='';
  if(idbox)document.getElementById(idbox).style.display='';
