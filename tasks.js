@@ -34,6 +34,7 @@ function tab(id){
  $("#"+id).attr("class","middle");
  $("#"+id+" button").addClass('activebutton');
  $("#"+$('#'+id).parent().attr('id')+" td[class]").each(function(){
+   alert($("#"+id).cellIndex);
   if((this).cellIndex!==$("#"+id).attr("cellIndex")){
    $(this).find("button").removeClass('activebutton');
   }
