@@ -84,9 +84,7 @@ function minmaximize(x){
  }
 }
 function aligntd(){
- $("td[class!='noalign']").each(function({
-  $(this).attr("align","center");
- }));
+ $("td[class!='noalign']").attr("align","center");
 }
 function advsearch(id){
  tab('searchtasktd');
