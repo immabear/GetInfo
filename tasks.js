@@ -60,10 +60,10 @@ function tab(id){
   }
  })
 };
-function show(id,idbox){
+function show(id){
  var divs=document.getElementsByTagName('div');
  $("#bodydiv").children("div").css("display","none");
- if(idbox)document.getElementById(idbox).style.display='';
+ $("#"+id).css("display","");
 }
 function minmaximize(x){
  var but=document.getElementById('minmax');
