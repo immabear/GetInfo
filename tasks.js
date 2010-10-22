@@ -69,7 +69,7 @@ function minmaximize(x){
    $("#bodydiv").animate({'marginTop': '-30px', 'top': '100%', 'height': '30px'}, 600,
     function(){
      $("#minmax").text("Maximize");
-     $("#minmax").click(minmaximize());
+     $("#minmax").each(function(){(this).onclick=function(){minmaximize()}});
 	}
    );
    break;
@@ -78,7 +78,7 @@ function minmaximize(x){
    $("#bodydiv").animate({'marginTop': '-300px', 'top': '50%', 'height': '600px'}, 600,
     function(){
      $("#minmax").text("Minimize");
-     $("#minmax").click(minmaximize(0));
+     $("#minmax").each(function(){(this).onclick=function(){minmaximize(0)}});
 	}
    );
  }
