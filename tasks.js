@@ -91,6 +91,5 @@ function advsearch(id){
 }
 function IMDb(id){
 minmaximize(0);
-$("#searchframe").html("<iframe src='http://www.imdb.com/find?s=all&q="+document.getElementById(id).innerHTML.replace(/ /g,'+')+"' class='searchframe' frameborder='0'></frame>");
-$("#searchframe").show(600);
+$("#searchframe").html("<iframe src='http://www.imdb.com/find?s=all&q="+document.getElementById(id).innerHTML.replace(/ /g,'+')+"' class='searchframe' frameborder='0'></frame>").show(600);
 }

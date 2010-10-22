@@ -76,8 +76,7 @@ function parsebtjunkie(id,data){
  });
  idobj.innerHTML=tablecd;
  aligntd();
- $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
- $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
 }
 function downloadbtjunkie(loc){

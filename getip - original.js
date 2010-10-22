@@ -74,7 +74,7 @@ var page="
  }
  function search(){
   var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\"),
-  type=document.getElementById('searchtype').value;
+  type=$('#searchtype').attr('value');
   switch(type){
     "+CsC2.join(' ')+"
    }
