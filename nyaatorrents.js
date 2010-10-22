@@ -58,16 +58,16 @@ function parsenyaatorrents(id,data){
     '<div id="result'+index+'" class="resultimgsm" style="width:720px;height:34px">'+
      com[index]+
     '</div>'+
-    '<div class="tooltipbig">'+
+    '<div class="tooltip">'+
      '<table>'+
       '<tr>'+
-       '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+ 
+       '<td><b id="searchresult'+index+'" style="display:none">'+title[index]+'</b>'+ 
        '</td>'+
 	  '</tr>'+
 	  '<tr>'+
 	   '<td style="height:30px">'+
-	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
-	    '<button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="button">IMDb</button>'+
+	    '<button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="button">Info/Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+
