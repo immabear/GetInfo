@@ -33,7 +33,7 @@ function error(id){
 function tab(id){
  var taskbar=document.getElementById(id).parentNode;
  $("#"+id).attr("class","middle");
- $("#"+id.id+" button").each(function(){
+ $("#"+id+" button").each(function(){
   (this).className=(this).className.split(' ')[0]+' activebutton';
  });
  $("#"+taskbar.id+" td[class]").each(function(){
