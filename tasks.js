@@ -34,14 +34,15 @@ function tab(id){
  $("#"+id).attr("class","middle");
  $("#"+id+" button").addClass('activebutton');
  $("#"+$('#'+id+':parent').attr('id')+" td[class]").each(function(){
-  if((this).cellIndex!==document.getElementById(id).cellIndex){
+  alert($("#"+id).attr("cellIndex"));
+  if((this).cellIndex!==$("#"+id).attr("cellIndex")){
    $(this).find("button").removeClass('activebutton');
   }
-  if((this).cellIndex<document.getElementById(id).cellIndex){
+  if((this).cellIndex<$("#"+id).attr("cellIndex")){
    if((this).cellIndex==0){$(this).attr("class","farleft");}
    else $(this).attr("class","left");
   }
-  else if((this).cellIndex>document.getElementById(id).cellIndex&&(this).className!=="farright"){
+  else if((this).cellIndex>$("#"+id).attr("cellIndex")&&(this).className!=="farright"){
    $(this).attr("class","right");
   }
  })
