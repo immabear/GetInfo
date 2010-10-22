@@ -33,7 +33,7 @@ function error(id){
 function tab(id){
  $("#"+id).attr("class","middle");
  $("#"+id+" button").addClass('activebutton');
- $("#"+$('#'+id+':parent').attr('id')+" td[class]").each(function(){
+ $("#"+$('#'+id).parent().attr('id')+" td[class]").each(function(){
   alert($("#"+id).attr("cellIndex"));
   if((this).cellIndex!==$("#"+id).attr("cellIndex")){
    $(this).find("button").removeClass('activebutton');
@@ -46,7 +46,7 @@ function tab(id){
    $(this).attr("class","right");
   }
  })
-};
+}
 function show(id){
  $("#bodydiv").children("div").css("display","none");
  $("#"+id).css("display","");
