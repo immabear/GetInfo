@@ -85,9 +85,9 @@ var page="
 <div id='bodydiv'>
  <table id='maintaskbar'>
   <tr id='taskbar'>
-   <td id='hometasktd' class='middle'><button id='hometask' class='buttonmed activebutton' onclick='tab(this.parentNode);show(\"home\",\"homebox\")'>Home</button></td>
-   <td id='searchtasktd' class='right'><button id='searchtask' class='buttonmed' onclick='tab(this.parentNode);show(\"search\",\"searchbox\")'>Search</button></td>
-   <td id='infotasktd' class='right'><button id='infotask' class='buttonmed' onclick='tab(this.parentNode);show(\"info\")'>Info</button></td>
+   <td id='hometasktd' class='middle'><button id='hometask' class='buttonmed activebutton' onclick='tab(this.parentNode.id);show(\"home\",\"homebox\")'>Home</button></td>
+   <td id='searchtasktd' class='right'><button id='searchtask' class='buttonmed' onclick='tab(this.parentNode.id);show(\"search\",\"searchbox\")'>Search</button></td>
+   <td id='infotasktd' class='right'><button id='infotask' class='buttonmed' onclick='tab(this.parentNode.id);show(\"info\")'>Info</button></td>
    <td id='fillertask'>&nbsp;</td>
    <td class='farright' id='minmaxtd'><button id='minmax' class='buttonmed' onclick='minmaximize(0)'>Minimize</button></td>
   </tr>
@@ -95,9 +95,9 @@ var page="
  <div id='home'>
   <table id='hometaskbar'>
    <tr id='movietask'>
-    <td id='theatertasktd' class='middle'><button id='theatertask' class='buttonbig activebutton' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[0],\"\",\"*\",\"*\");'>In Theaters</button></td>
-    <td id='soontasktd' class='right'><button id='soontask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[1],\"\",\"*\",\"*\");'>Coming Soon</button></td>
-    <td id='dvdtasktd' class='right'><button id='dvdtask' class='buttonbig' onclick='tab(this.parentNode);fetchPage(\"homebox\",sources[2],\"\",\"*\",\"*\");'>On DVD/Bluray</button></td>
+    <td id='theatertasktd' class='middle'><button id='theatertask' class='buttonbig activebutton' onclick='tab(this.parentNode.id);fetchPage(\"homebox\",sources[0],\"\",\"*\",\"*\");'>In Theaters</button></td>
+    <td id='soontasktd' class='right'><button id='soontask' class='buttonbig' onclick='tab(this.parentNode.id);fetchPage(\"homebox\",sources[1],\"\",\"*\",\"*\");'>Coming Soon</button></td>
+    <td id='dvdtasktd' class='right'><button id='dvdtask' class='buttonbig' onclick='tab(this.parentNode.id);fetchPage(\"homebox\",sources[2],\"\",\"*\",\"*\");'>On DVD/Bluray</button></td>
     <td id='fillertasktd'>&nbsp;</td>
    </tr>
   </table>

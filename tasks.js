@@ -31,14 +31,7 @@ function error(id){
  alert(humanerror.join('\n'));
 }
 function tab(id){
- switch(id){
-  case 'searchtasktd':
-   var taskbar=document.getElementById(id).parentNode;
-   id=$("#"+id).attr("id");
-   break;
- default:
-   var taskbar=id.parentNode; 
- }
+ var taskbar=document.getElementById(id).parentNode;
  $("#"+id).attr("class","middle");
  $("#"+id.id+" button").each(function(){
   (this).className=(this).className.split(' ')[0]+' activebutton';
