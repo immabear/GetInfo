@@ -33,21 +33,17 @@ function error(id){
 function tab(id){
  var taskbar=document.getElementById(id).parentNode;
  $("#"+id).attr("class","middle");
- $("#"+id+" button").each(function(){
-  (this).className=(this).className.split(' ')[0]+' activebutton';
- });
+ $("#"+id+" button").addClass('activebutton');
  $("#"+taskbar.id+" td[class]").each(function(){
   if((this).cellIndex!==id.cellIndex){
-   $(this).find("button").each(function(){
-    (this).className=(this).className.split(' ')[0];
-   });
+   $(this).find("button").removeClass('activebutton');
   }
   if((this).cellIndex<id.cellIndex){
-   if((this).cellIndex==0){(this).className="farleft";}
-   else(this).className="left";
+   if((this).cellIndex==0){$(this).attr("class","farleft");}
+   else$(this).attr("class","left");
   }
   else if((this).cellIndex>id.cellIndex&&(this).className!=="farright"){
-   (this).className="right";
+   $(this).attr("class","right");
   }
  })
 };
