@@ -66,19 +66,17 @@ function minmaximize(x){
  switch(x){
   case 0:
    $("#searchframe").show(600);
-   $("#bodydiv").animate({'marginTop': '-30px', 'top': '100%', 'height': '30px'}, 600,
+   $("#bodydiv").animate({'marginTop':'-30px','top':'100%','height':'30px'},600,
     function(){
-     $("#minmax").text("Maximize");
-     $("#minmax").onclick=minmaximize();
+     $("#minmax").text("Maximize").each(function(){(this).onclick=function(){minmaximize()}});
 	}
    );
    break;
   default:
    $("#searchframe").hide(600);
-   $("#bodydiv").animate({'marginTop': '-300px', 'top': '50%', 'height': '600px'}, 600,
+   $("#bodydiv").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
     function(){
-     $("#minmax").text("Minimize");
-     $("#minmax").onclick=minmaximize(0);
+     $("#minmax").text("Minimize").each(function(){(this).onclick=function(){minmaximize(0)}});
 	}
    );
  }
