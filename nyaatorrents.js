@@ -45,13 +45,15 @@ function parsenyaatorrents(id,data){
      '<td class="comoverlap" rowspan="2" style="width:80px;border:0">'+
 	  '<div class="nohide" style="width:80px;height:28px;border:0;background:url('+cat[index]+')"> </div>'+
 	 '</td>'+
-     '<td class="comoverlap" colspan="4" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+title[index]+'</td>'+
+     '<td class="comoverlap" colspan="6" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+title[index]+'</td>'+
     '</tr>'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+'</td>'+
      '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
+     '<td class="comoverlap"><button onclick="IMDb(\'searchresult'+index+'\')" class="button">IMDb</button></td>'+
+     '<td class="comoverlap"><button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="button">Download</button></td>'+
     '</tr>'+
    '</table>';
    tablerow=
