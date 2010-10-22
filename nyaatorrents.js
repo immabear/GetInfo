@@ -9,7 +9,7 @@ function parsenyaatorrents0(id,data){
 }
 
 function parsenyaatorrents(id,data){
- var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], dls=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ var dataarray=[],title=[],seed=[],leech=[],cat=[],cat=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='',idobj=document.getElementById(id);
  dataarray=data.split("<tr");
  $.each(dataarray,function(index, value){
   if(index!==0){
@@ -17,7 +17,7 @@ function parsenyaatorrents(id,data){
    $(dataarray[index]).find('td').each(function(){
     switch($(this).attr('class')){
 	 case 'tlisticon':
-	  $(this).find('img').each(function(){cat[index]=$(this).attr('src')});
+	  $(this).find('img').each(function(){cat[index]=$(this).attr('src'); alt[index]=$(this).attr('alt')});
 	  break;
 	 case 'tlistname':
 	  $(this).find('a').each(function(){title[index]=$(this).attr('title')});
@@ -63,7 +63,7 @@ function parsenyaatorrents(id,data){
       '<tr>'+
        '<td>'+
 	    '<b id="searchresult'+index+'" style="display:none">'+title[index]+'</b>'+
-	    '<div class="nohide" style="width:80px;height:28px;border:0;background:url('+cat[index]+')"> </div>'+
+	    '<div class="nohide" alt="'+alt[index]+'" style="width:80px;height:28px;border:0;background:url('+cat[index]+')"> </div>'+
        '</td>'+
 	  '</tr>'+
 	  '<tr>'+
@@ -81,7 +81,7 @@ function parsenyaatorrents(id,data){
  aligntd();
  $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var dataarray=[], title=[], seed=[], leech=[], cat=[], size=[], com=[], loc=[], dls=[], tablerow, tablecd='';
+ var dataarray=[],title=[],seed=[],leech=[],cat=[],cat=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
 }
 function downloadnyaatorrents(loc){
  minmaximize(0);
