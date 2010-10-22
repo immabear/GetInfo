@@ -40,7 +40,7 @@ function tab(id){
   }
   if((this).cellIndex<id.cellIndex){
    if((this).cellIndex==0){$(this).attr("class","farleft");}
-   else$(this).attr("class","left");
+   else $(this).attr("class","left");
   }
   else if((this).cellIndex>id.cellIndex&&(this).className!=="farright"){
    $(this).attr("class","right");
