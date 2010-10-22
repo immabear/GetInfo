@@ -34,7 +34,7 @@ function tab(id){
  switch(id){
   case 'searchtasktd':
    var taskbar=document.getElementById(id).parentNode;
-   id=$("#"+id).id;
+   id=$("#"+id).attr("id");
    break;
  default:
    var taskbar=id.parentNode; 
