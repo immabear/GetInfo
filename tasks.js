@@ -2,12 +2,10 @@ var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human 
 hal=["...I'm sorry, Dave, I'm afraid I can't do that."],
 sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
 $('#searchtags').live('keypress',function(e){
- if(e.keyCode == 13) {
-  search();
- }
+ if(e.keyCode==13)search();
 });
 function fetchPage(id,url,parser,select,xpath){
- document.getElementById(id).innerHTML='<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>';
+ $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
  $.ajax({
   select: select,
   xpath: xpath,
@@ -22,26 +20,26 @@ function fetchPage(id,url,parser,select,xpath){
  });
 }
 function fetchRss(id,url,parser){
- document.getElementById(id).innerHTML='Searching...';
+ $("#"+id).html('Searching...');
   var rssresults=[],
-  query = "select * from feed where url='"+url+"'",
-  yqlurl = "http://query.yahooapis.com/v1/public/yql?q="+encodeURIComponent(query)+"&format=json&callback=?";
+  query="select * from feed where url='"+url+"'",
+  yqlurl="http://query.yahooapis.com/v1/public/yql?q="+encodeURIComponent(query)+"&format=json&callback=?";
   $.getJSON(yqlurl, function(data){parseswitch(id,data,parser,"rss");});
 }
 function error(id){
- document.getElementById(id).innerHTML=hal[0];
+ $("#"+id).html(hal[0]);
  alert(humanerror.join('\n'));
 }
 function tab(id){
  switch(id){
   case 'searchtasktd':
    var taskbar=document.getElementById(id).parentNode;
-   id=document.getElementById(id);
+   id=$("#"+id).id;
    break;
  default:
    var taskbar=id.parentNode; 
  }
- id.className="middle";
+ $("#"+id).attr("class","middle");
  $("#"+id.id+" button").each(function(){
   (this).className=(this).className.split(' ')[0]+' activebutton';
  });
@@ -61,19 +59,17 @@ function tab(id){
  })
 };
 function show(id){
- var divs=document.getElementsByTagName('div');
  $("#bodydiv").children("div").css("display","none");
  $("#"+id).css("display","");
 }
 function minmaximize(x){
- var but=document.getElementById('minmax');
  switch(x){
   case 0:
    $("#searchframe").show(600);
    $("#bodydiv").animate({'marginTop': '-30px', 'top': '100%', 'height': '30px'}, 600,
     function(){
      $("#minmax").text("Maximize");
-     but.onclick=function(){minmaximize()};
+     $("#minmax").onclick=function(){minmaximize()};
 	}
    );
    break;
@@ -82,26 +78,23 @@ function minmaximize(x){
    $("#bodydiv").animate({'marginTop': '-300px', 'top': '50%', 'height': '600px'}, 600,
     function(){
      $("#minmax").text("Minimize");
-     but.onclick=function(){minmaximize(0)};
+     $("#minmax").onclick=function(){minmaximize(0)};
 	}
    );
  }
 }
 function aligntd(){
- var tds=document.getElementsByTagName('td');
- for(var t=0;t<tds.length;t++){
-  if(tds[t].className!=='noalign'){ 
-   tds[t].align='center';
-  }
- }
+ $("td[class!='noalign']").each(function({
+  $(this).attr("align","center");
+ }));
 }
 function advsearch(id){
  tab('searchtasktd');
- show('search','searchbox');
- document.getElementById('searchtags').value=document.getElementById(id).innerHTML;
+ show('search');
+ $("#searchtags").attr("value",$("#"+id).html());
 }
 function IMDb(id){
 minmaximize(0);
-document.getElementById('searchframe').innerHTML="<iframe src='http://www.imdb.com/find?s=all&q="+document.getElementById(id).innerHTML.replace(/ /g,'+')+"' class='searchframe' frameborder='0'></frame>";
+$("#searchframe").html("<iframe src='http://www.imdb.com/find?s=all&q="+document.getElementById(id).innerHTML.replace(/ /g,'+')+"' class='searchframe' frameborder='0'></frame>");
 $("#searchframe").show(600);
 }
