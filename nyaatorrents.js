@@ -9,7 +9,7 @@ function parsenyaatorrents(id,data){
 }
 
 function parsenyaatorrents0(id,data){
- var dataarray=[],title=[],seed=[],leech=[],cat=[],cat=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='',idobj=document.getElementById(id);
+ var dataarray=[],title=[],seed=[],leech=[],cat=[],alt=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='',idobj=document.getElementById(id);
  dataarray=data.split("<tr");
  $.each(dataarray,function(index, value){
   if(index!==0){
@@ -17,7 +17,7 @@ function parsenyaatorrents0(id,data){
    $(dataarray[index]).find('td').each(function(){
     switch($(this).attr('class')){
 	 case 'tlisticon':
-	  $(this).find('img').each(function(){cat[index]=$(this).attr('src'); alt[index]=$(this).attr('alt')});
+	  $(this).find('img').each(function(){cat[index]=$(this).attr('src'); alt[index]=$(this).attr('alt');});
 	  break;
 	 case 'tlistname':
 	  $(this).find('a').each(function(){title[index]=$(this).attr('title')});
@@ -80,7 +80,7 @@ function parsenyaatorrents0(id,data){
  idobj.innerHTML=tablecd;
  aligntd();
  $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var dataarray=[],title=[],seed=[],leech=[],cat=[],cat=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
+ var dataarray=[],title=[],seed=[],leech=[],cat=[],alt=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
 }
 function downloadnyaatorrents(loc){
  minmaximize(0);
