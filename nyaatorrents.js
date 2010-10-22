@@ -52,8 +52,6 @@ function parsenyaatorrents(id,data){
      '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
-     '<td class="comoverlap" style="width:70px;height:14px"><button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed" style="height:14px">IMDb</button></td>'+
-     '<td class="comoverlap" style="width:70px;height:14px"><button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="buttonmed" style="height:14px">Download</button></td>'+
     '</tr>'+
    '</table>';
    tablerow=
@@ -63,13 +61,15 @@ function parsenyaatorrents(id,data){
     '<div class="tooltip">'+
      '<table>'+
       '<tr>'+
-       '<td><b id="searchresult'+index+'" style="display:none">'+title[index]+'</b>'+ 
+       '<td>'+
+	    '<b id="searchresult'+index+'" style="display:none">'+title[index]+'</b>'+
+	    '<div class="nohide" style="width:80px;height:28px;border:0;background:url('+cat[index]+')"> </div>'+
        '</td>'+
 	  '</tr>'+
 	  '<tr>'+
 	   '<td style="height:30px">'+
-	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="button">IMDb</button>'+
-	    '<button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="button">Info/Download</button>'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed">IMDb</button>'+
+	    '<button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="buttonmed">Info/Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+
