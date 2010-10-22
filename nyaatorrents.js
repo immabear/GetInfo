@@ -52,8 +52,8 @@ function parsenyaatorrents(id,data){
      '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
      '<td class="comoverlap">Downloads: '+dls[index]+'</td>'+
-     '<td class="comoverlap"><button onclick="IMDb(\'searchresult'+index+'\')" class="button">IMDb</button></td>'+
-     '<td class="comoverlap"><button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="button">Download</button></td>'+
+     '<td class="comoverlap" style="width:70px"><button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed" style="height:14px">IMDb</button></td>'+
+     '<td class="comoverlap" style="width:70px"><button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="buttonmed" style="height:14px">Download</button></td>'+
     '</tr>'+
    '</table>';
    tablerow=
