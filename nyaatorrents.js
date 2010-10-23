@@ -3,11 +3,8 @@ CsU[CN]="html~http://www.nyaatorrents.org/?page=search&cat=0_0&filter=0&term=|";
 CsS[CN]="*";
 CsX[CN]='//table[@class="tlist"]/tr[@class!="tlisthead"]';
 function parsenyaatorrents0(id,data){
- var idobj=document.getElementById(id);
- idobj.innerHTML='<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>';
- idobj.style.display='';
+ $('#'+id).html('<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>');
 }
-
 function parsenyaatorrents(id,data){
  var dataarray=[],title=[],seed=[],leech=[],cat=[],alt=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
  dataarray=data.split("<tr");
