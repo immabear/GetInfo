@@ -2,9 +2,9 @@ var CN=CN+1;
 CsU[CN]="html~http://btjunkie.org/search?q=|";
 CsS[CN]='a, content';
 CsX[CN]=
-	'//div[@id="main"]/table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/p | '+
-	'//div[@id="main"]/table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/font | '+
-	'//div[@id="main"]/table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/a/strong';
+	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/p | '+
+	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/font | '+
+	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie0(id,data){
  $('#'+id).html('<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>');
 }
