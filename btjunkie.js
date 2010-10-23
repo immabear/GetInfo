@@ -6,7 +6,7 @@ CsX[CN]=
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]/table[1]/tr/th/table/tr/th/table/tr//th/a/strong';
 function parsebtjunkie(id,data){
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='', idobj=document.getElementById(id);
+ var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
   if(index!==0&&index<((dataarray.length)-6)){
@@ -74,10 +74,10 @@ function parsebtjunkie(id,data){
    tablecd=tablecd+tablerow;
   }
  });
- idobj.innerHTML=tablecd;
+ $('#'+id).html(tablecd);
  aligntd();
- $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
- $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+id+' div[id]').last().css('margin-bottom', '10px');
+ $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
 }
 function downloadbtjunkie(loc){

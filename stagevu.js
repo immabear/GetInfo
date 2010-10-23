@@ -3,12 +3,11 @@ CsU[CN]="html~http://stagevu.com/search?for=|&in=Videos";
 CsS[CN]="*";
 CsX[CN]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
- var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='', idobj=document.getElementById(id);
- idobj.innerHTML='';
+ var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='';
  $(data).find('div').each(function(index){
   if($(this).find('div').attr('class')=='searcherror'){
    tablecd="...I'm sorry, Dave, I'm afraid I can't do that.";
-   error(idobj.id);
+   error(id);
   }
   else if($(this).attr('class')=='result1'||$(this).attr('class')=='result2'){
    $(this).find('img').each(function(){
@@ -62,10 +61,10 @@ function parsestagevu(id,data){
    tablecd=tablecd+tablerow;
   }
  });
- idobj.innerHTML=tablecd;
+ $('#'+id).html(tablecd);
  aligntd();
- $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
- $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+id+' div[id]').last().css('margin-bottom', '10px');
+ $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='';
 }
 function downloadstagevu(loc){

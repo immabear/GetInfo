@@ -195,7 +195,9 @@ button:hover{
 	font-size:11px;
 	color:white;
 	text-shadow: 2px 2px 2px #222222;
+	background-color: transparent;
 	background-color: rgba(34, 34, 34, .5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000050,endColorstr=#99000050);
 	overflow:hidden;
 	text-overflow:ellipsis;
  	-moz-border-radius:5px;

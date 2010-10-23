@@ -1,6 +1,5 @@
 function parse(id,data){
- var src=[], alt=[], com=[], tablerow, tablecd='', idobj=document.getElementById(id);
- idobj.innerHTML='';
+ var src=[], alt=[], com=[], tablerow, tablecd='';
  $(data).find('div').each(function(index){
   if($(this).attr('class')=='movie'){
    $(this).find('img').each(function(){
@@ -36,9 +35,9 @@ function parse(id,data){
    tablecd=tablecd+tablerow;
    }
  });
- idobj.innerHTML=tablecd;
+ $('#'+id).html(tablecd);
  aligntd();
- $('#'+idobj.id+' div[id]').last().css('margin-bottom', '10px');
- $('#'+idobj.id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+id+' div[id]').last().css('margin-bottom', '10px');
+ $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
  var src=[], alt=[], com=[], tablerow, tablecd='';
 }
