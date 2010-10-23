@@ -56,7 +56,7 @@ function parsebtjunkie(id,data){
     '</tr>'+
    '</table>';
    tablerow=
-    '<div id="result'+index+'" class="resultimgsm">'+
+    '<div id="result'+index+'" class="resultimgsm"  style="width:720px;height:34px">'+
      com[index]+
     '</div>'+
     '<div class="tooltipbig">'+
