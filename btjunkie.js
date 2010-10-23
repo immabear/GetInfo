@@ -58,7 +58,7 @@ function parsebtjunkie(id,data){
     '<div id="result'+index+'" class="resultimgsm"  style="width:720px;height:34px">'+
      com[index]+
     '</div>'+
-    '<div class="tooltipbig">'+
+    '<div class="tooltip">'+
      '<table>'+
       '<tr>'+
        '<td>'+
@@ -67,8 +67,8 @@ function parsebtjunkie(id,data){
 	  '</tr>'+
 	  '<tr>'+
 	   '<td style="height:30px">'+
-	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonbig">IMDb</button>'+
-	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonbig">Info/Download</button>'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed">IMDb</button>'+
+	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonmed">Info/Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+
