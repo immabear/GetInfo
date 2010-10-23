@@ -41,15 +41,13 @@ function parsebtjunkie(id,data){
    com[index]=
    '<table>'+
     '<tr>'+
-     '<td class="comoverlap">Seeds: '+seed[index]+' | Leechs: '+leech[index]+'</td>'+
+     '<td class="comoverlap" colspan="4" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+title[index]+'</td>'+
     '</tr>'+
     '<tr>'+
+     '<td class="comoverlap">Seeds: '+seed[index]+'</td>'+
+     '<td class="comoverlap">Leechs: '+leech[index]+'</td>'+
      '<td class="comoverlap">Size: '+size[index]+'</td>'+
-    '</tr>'+
-    '<tr>'+
      '<td class="comoverlap">Category: '+cat[index]+'</td>'+
-    '</tr>'+
-    '<tr>'+
      '<td class="comoverlap">Date: '+date[index]+'</td>'+
     '</tr>'+
    '</table>';
@@ -60,7 +58,8 @@ function parsebtjunkie(id,data){
     '<div class="tooltipbig">'+
      '<table>'+
       '<tr>'+
-       '<td><b id="searchresult'+index+'">'+title[index]+'</b>'+ 
+       '<td>'+
+	    '<b id="searchresult'+index+'" style="display:none">'+title[index]+'</b>'+
        '</td>'+
 	  '</tr>'+
 	  '<tr>'+
