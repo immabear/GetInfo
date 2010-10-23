@@ -8,8 +8,9 @@ function fetchPage(id,url,parser,select,xpath){
  $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
  if(url.search(/DOMAIN/)){
   var temp=url.split("/");
-  url=temp[0]+temp[1]+temp[2];
+  url=temp[0]+"/"+temp[1]+"/"+temp[2]+"/";
  };
+ alert(url);
  $.ajax({
   select: select,
   xpath: xpath,
