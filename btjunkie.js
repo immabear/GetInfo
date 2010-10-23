@@ -15,7 +15,6 @@ function parsebtjunkie(id,data){
   if(index!==0&&index<((dataarray.length)-6)&&index<6){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<\/strong>/,'<strong>|||');
-   alert(dataarray[index]);
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|||')[0];
    loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
@@ -45,7 +44,7 @@ function parsebtjunkie(id,data){
    com[index]=
    '<table>'+
     '<tr>'+
-     '<td class="comoverlap" colspan="4" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+title[index]+'</td>'+
+     '<td class="comoverlap" colspan="5" style="height:10px;width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+title[index]+'</td>'+
     '</tr>'+
     '<tr>'+
      '<td class="comoverlap">Seeds: '+seed[index]+'</td>'+
