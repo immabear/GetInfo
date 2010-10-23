@@ -12,9 +12,10 @@ function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-6)){
+  if(index!==0&&index<((dataarray.length)-6)&&index<6){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ').replace(/<strong>/,'<strong>|||');
+   alert(dataarray[index]);
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|||')[0];
    loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
