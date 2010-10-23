@@ -68,7 +68,7 @@ function parsebtjunkie(id,data){
 	  '<tr>'+
 	   '<td style="height:30px">'+
 	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed">IMDb</button>'+
-	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonmed">Info/Download</button>'+
+	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonmed">Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+

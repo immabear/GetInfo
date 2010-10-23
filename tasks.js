@@ -6,6 +6,7 @@ $('#searchtags').live('keypress',function(e){
 });
 function fetchPage(id,url,parser,select,xpath){
  $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
+ if(select=="")url=url.split("?")[0];
  $.ajax({
   select: select,
   xpath: xpath,
