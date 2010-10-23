@@ -5,10 +5,10 @@ CsX[CN]=
 	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/p | '+
 	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/font | '+
 	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/a/strong';
-function parsebtjunkie(id,data){
+function parsebtjunkie0(id,data){
  $('#'+id).html('<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>');
 }
-function parsebtjunkie0(id,data){
+function parsebtjunkie(id,data){
  var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
