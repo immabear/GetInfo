@@ -11,7 +11,7 @@ function parsenyaatorrents(id,data){
  $.each(dataarray,function(index, value){
   if(index!==0){
    dataarray[index]='<tr'+value;
-   $(dataarray[index]).find('td').each(function(){
+   $(dataarray[index]).find('td[class]').each(function(){
     switch($(this).attr('class')){
 	 case 'tlisticon':
 	  $(this).find('img').each(function(){cat[index]=$(this).attr('src'); alt[index]=$(this).attr('alt');});

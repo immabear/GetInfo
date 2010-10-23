@@ -3,8 +3,8 @@ CsU[CN]="html~http://stagevu.com/search?for=|&in=Videos";
 CsS[CN]="*";
 CsX[CN]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){
- var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='';
- $(data).find('div').each(function(index){
+ var src=[],alt=[],desc=[],com=[],loc=[],lng=[],tablerow,tablecd='';
+ $(data).find('div[class]').each(function(index){
   if($(this).find('div').attr('class')=='searcherror'){
    tablecd="...I'm sorry, Dave, I'm afraid I can't do that.";
    error(id);
@@ -65,7 +65,7 @@ function parsestagevu(id,data){
  aligntd();
  $('#'+id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var src=[], alt=[], desc=[], com=[], loc=[], lng=[], tablerow, tablecd='';
+ var src=[],alt=[],desc=[],com=[],loc=[],lng=[],tablerow,tablecd='';
 }
 function downloadstagevu(loc){
  minmaximize(0);

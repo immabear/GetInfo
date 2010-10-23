@@ -9,7 +9,7 @@ function parsebtjunkie0(id,data){
  $('#'+id).html('<textarea style="width:100%;height:100%">DEBUGGING:\nFetching Page...Success!\n'+data+'</textarea>');
 }
 function parsebtjunkie(id,data){
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
+ var dataarray=[],title=[],temp=[],seed=[],leech=[],cat=[],size=[],date=[],com=[],loc=[],tablerow,tablecd='';
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
   if(index!==0&&index<((dataarray.length)-6)){
@@ -82,7 +82,7 @@ function parsebtjunkie(id,data){
  aligntd();
  $('#'+id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var dataarray=[], title=[], temp=[], seed=[], leech=[], cat=[], size=[], date=[], com=[], loc=[], tablerow, tablecd='';
+ var dataarray=[],title=[],temp=[],seed=[],leech=[],cat=[],size=[],date=[],com=[],loc=[],tablerow,tablecd='';
 }
 function downloadbtjunkie(loc){
  minmaximize(0);
