@@ -74,6 +74,7 @@ var page="
  function search(){
   var tags=document.getElementById('searchtags').value.replace(/ /g,\"+\"),
   type=$('#searchtype').attr('value');
+  if(tags=='')tags='DOMAIN';
   switch(type){
     "+CsC2.join(' ')+"
    }
