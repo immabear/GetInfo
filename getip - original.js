@@ -1,6 +1,6 @@
 function Retriever(){
 var Cs=["stagevu","btjunkie","nyaatorrents","debug"], CsS=[], CsC=[], CsD=[], CsC2=[], CsSC=[],
-Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.xdomainajax.js","tasks.js","default.js"], DbS=[];
+Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.tools.min.js","jquery.xdomainajax.js","tasks.js","default.js"], DbS=[];
 String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
 for(var t=0;t<Cs.length;t++){
  CsS[t]='<script src="'+Db[0]+Cs[t]+'.js"></script>';
@@ -46,7 +46,6 @@ var page="
 <link rel='shortcut icon' href='"+Db[0]+"favicon.jpg'/>
 <link rel='stylesheet' type='text/css' href='"+Db[0]+"stylesb.css'/>
 <title>\u22D8GET: INFO\u22D9 by IMMABEAR</title>
-<script src=\"http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js\"></script>
 "+DbS.join(' ')+CsS.join(' ')+"
 <script>
  function parseswitch(id,data,parser,type){
