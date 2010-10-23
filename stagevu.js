@@ -1,4 +1,4 @@
-var CsU=[], CsS=[], CsX=[], CN=0;
+var CsU=[],CsS=[],CsX=[],CN=0;
 CsU[CN]="html~http://stagevu.com/search?for=|&in=Videos";
 CsS[CN]="*";
 CsX[CN]='//div[@id="resultsbox1"]';
@@ -19,24 +19,18 @@ function parsestagevu(id,data){
 	 return false;
 	}
    });
-   $(this).find('h2').each(function(){
-     $(this).find('a').each(function(){
+   $(this).find('h2 a').each(function(){
 	  alt[index]=$(this).text();
-	  loc[index]=$(this).attr('href');
-	  loc[index]=loc[index].split('/')[4];
-	 });
+	  loc[index]=$(this).attr('href').split('/')[4];
    });
    $(this).find('p').each(function(){
 	desc[index]=$(this).text();
 	return false;
    });
-   $(this).find('div').each(function(){
-    if($(this).attr('class')=='floatright'){
+   $(this).find('div[class="floatright"]').each(function(){
 	 lng[index]=$(this).html();
 	 lng[index]=lng[index]+'';
-     lng[index]=lng[index].split('>')[7];
-     lng[index]=lng[index].split('\;')[0];
-	}
+     lng[index]=lng[index].split('>')[7].split('\;')[0];
    });
    com[index]='<table><tr><td class="comoverlap">'+com[index]+'/5 Stars | Length: '+lng[index]+'</td></tr></table>';
    tablerow=

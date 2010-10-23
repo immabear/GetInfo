@@ -1,5 +1,5 @@
 function parse(id,data){
- var src=[], alt=[], com=[], tablerow, tablecd='';
+ var src=[],alt=[],com=[],tablerow,tablecd='';
  $(data).find('div[class="movie"]').each(function(index){
   $(this).find('img[class="thePoster"]').each(function(){
    src[index]=$(this).attr('src');
@@ -33,5 +33,5 @@ function parse(id,data){
  aligntd();
  $('#'+id+' div[id]').last().css('margin-bottom', '10px');
  $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
- var src=[], alt=[], com=[], tablerow, tablecd='';
+ var src=[],alt=[],com=[],tablerow,tablecd='';
 }
