@@ -84,6 +84,5 @@ function parsebtjunkie(id,data){
 }
 function downloadbtjunkie(loc){
  minmaximize(0);
- document.getElementById('searchframe').innerHTML="<iframe src='http://dl.btjunkie.org"+loc+"/download.torrent' class='searchframe' frameborder='0'></frame>";
- $("#searchframe").show(600);
+ $("#searchframe").html("<iframe src='http://dl.btjunkie.org"+loc+"/download.torrent' class='searchframe' frameborder='0'></frame>").show(600);
 }

@@ -81,6 +81,5 @@ function parsenyaatorrents(id,data){
  var dataarray=[],title=[],seed=[],leech=[],cat=[],alt=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
 }
 function downloadnyaatorrents(loc){
- document.getElementById('searchframe').innerHTML="<iframe src='"+loc+"' class='searchframe' frameborder='0'></frame>";
- $("#searchframe").show(600);
+ $("#searchframe").html("<iframe src='"+loc+"' class='searchframe' frameborder='0'></frame>").show(600);
 }
