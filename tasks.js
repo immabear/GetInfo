@@ -10,7 +10,6 @@ function fetchPage(id,url,parser,select,xpath){
   var temp=url.split("/");
   url=temp[0]+"/"+temp[1]+"/"+temp[2]+"/";
  };
- alert(url);
  $.ajax({
   select: select,
   xpath: xpath,
