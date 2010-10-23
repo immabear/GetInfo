@@ -7,7 +7,7 @@ $('#searchtags').live('keypress',function(e){
 function fetchPage(id,url,parser,select,xpath){
  $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
  alert(url.search(/DOMAIN/));
- if(url.search(/DOMAIN/)==-1){
+ if(url.search(/DOMAIN/)!==-1){
   var temp=url.split("/");
   url=temp[0]+"/"+temp[1]+"/"+temp[2]+"/";
  };
