@@ -31,7 +31,7 @@ function parse(id,data){
  });
  $('#'+id).html(tablecd);
  aligntd();
- $('#'+id+' div[id]').last().css('margin-bottom', '10px');
- $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+id+' div[id]').last().css('margin-bottom','10px');
+ $('#'+id+' div[id]').tooltip({effect:'slide',offset:[27,10],relative:'true'});
  var src=[],alt=[],com=[],tablerow,tablecd='';
 }

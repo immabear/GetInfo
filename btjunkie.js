@@ -12,7 +12,7 @@ function parsebtjunkie(id,data){
  var dataarray=[],title=[],temp=[],seed=[],leech=[],cat=[],size=[],date=[],com=[],loc=[],tablerow,tablecd='';
  dataarray=data.split("<p");
  $.each(dataarray,function(index, value){
-  if(index!==0&&index<((dataarray.length)-7)){
+  if(index!==0&&index<((dataarray.length)-8)){
    dataarray[index]='<p'+value;
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ');
    if(dataarray[index].search(/<strong>/)==-1)dataarray[index]=dataarray[index].replace(/<\/strong>/,'<strong>');
@@ -57,7 +57,7 @@ function parsebtjunkie(id,data){
     '</tr>'+
    '</table>';
    tablerow=
-    '<div id="result'+index+'" class="resultimgsm"  style="width:720px;height:34px">'+
+    '<div id="result'+index+'" class="resultimgsm" style="width:720px;height:34px">'+
      com[index]+
     '</div>'+
     '<div class="tooltip">'+
@@ -80,8 +80,8 @@ function parsebtjunkie(id,data){
  });
  $('#'+id).html(tablecd);
  aligntd();
- $('#'+id+' div[id]').last().css('margin-bottom', '10px');
- $('#'+id+' div[id]').tooltip({effect: 'slide',offset: [27, 10],relative: 'true'});
+ $('#'+id+' div[id]').last().css('margin-bottom','10px');
+ $('#'+id+' div[id]').tooltip({effect:'slide',offset:[27,10],relative:'true'});
  var dataarray=[],title=[],temp=[],seed=[],leech=[],cat=[],size=[],date=[],com=[],loc=[],tablerow,tablecd='';
 }
 function downloadbtjunkie(loc){
