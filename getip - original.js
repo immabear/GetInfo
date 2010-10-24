@@ -61,7 +61,6 @@ var page="
   <tr id='taskbar'>
    <td id='hometasktd' class='middle'><button id='hometask' class='buttonmed activebutton' onclick='tab(this.parentNode.id);show(\"home\")'>Home</button></td>
    <td id='searchtasktd' class='right'><button id='searchtask' class='buttonmed' onclick='tab(this.parentNode.id);show(\"search\")'>Search</button></td>
-   <td id='infotasktd' class='right'><button id='infotask' class='buttonmed' onclick='tab(this.parentNode.id);show(\"info\")'>Info</button></td>
    <td id='fillertask'>&nbsp;</td>
    <td class='farright' id='minmaxtd'><button id='minmax' class='buttonmed' onclick='minmaximize(0)'>Minimize</button></td>
   </tr>
