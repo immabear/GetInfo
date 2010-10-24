@@ -1,5 +1,5 @@
 var CN=CN+1;
-CsU[CN]="html~http://immabear.comoj.com/debug.php?q=|";
+CsU[CN]="http://immabear.comoj.com/debug.php?q=|";
 CsS[CN]='*';
 CsX[CN]='*';
 function parsedebug(id,data){

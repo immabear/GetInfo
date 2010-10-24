@@ -233,7 +233,7 @@ button:hover{
 	width:30px;
 }
 
-#hometasktd,#minmaxtd,#searchbuttd,#searchtasktd,#infotasktd{
+#hometasktd,#minmaxtd,#searchbuttd,#searchtasktd{
 	width:80px;
 }
 
@@ -245,7 +245,7 @@ button:hover{
 	margin-top:10px;
 }
 
-#hometaskbar,#searchtaskbar,#infotaskbar{
+#hometaskbar,#searchtaskbar{
 	width:780px;
 	height:30px;
 	margin:-2px;
@@ -297,20 +297,6 @@ button:hover{
 	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D1D5EE', endColorstr='#EEF2FF');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D1D5EE', endColorstr='#EEF2FF')";
 	width:585px;
-}
-
-#info{
-	width:776px;
-	height:546px;
-	color:black;
-	margin-left:10px;
-	margin-top:10px;
-}
-
-#infobox{
-	width:258px;
-	color:black;
-	border:0;
 }
 
 #searchframe,#background,.searchframe{

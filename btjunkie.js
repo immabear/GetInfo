@@ -1,5 +1,5 @@
 var CN=CN+1;
-CsU[CN]="html~http://btjunkie.org/search?q=|";
+CsU[CN]="http://btjunkie.org/search?q=|";
 CsS[CN]='a, content';
 CsX[CN]=
 	'//div[@id="main"]//table[@class="tab_result" or @class="tab_results"]/tr/th/table/tr/th/table/tr//th/p | '+

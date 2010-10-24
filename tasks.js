@@ -8,7 +8,7 @@ function fetchPage(id,url,parser,select,xpath){
  $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
  if(url.search(/DOMAIN/)!==-1){
   var temp=url.split("/");
-  url=temp[0]+"/"+temp[1]+"/"+temp[2]+"/";
+  url=temp[0]+"//"+temp[2]+"/";
  };
  $.ajax({
   select: select,
@@ -28,7 +28,7 @@ function fetchRss(id,url,parser){
   var rssresults=[],
   query="select * from feed where url='"+url+"'",
   yqlurl="http://query.yahooapis.com/v1/public/yql?q="+encodeURIComponent(query)+"&format=json&callback=?";
-  $.getJSON(yqlurl, function(data){parseswitch(id,data,parser,"rss");});
+  $.getJSON(yqlurl, function(data){parseswitch(id,data,parser);});
 }
 function error(id){
  $("#"+id).html(hal[0]);

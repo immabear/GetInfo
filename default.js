@@ -1,11 +1,11 @@
 function parse(id,data){
  var src=[],alt=[],com=[],tablerow,tablecd='';
- $(data).find('div[class="movie"]').each(function(index){
-  $(this).find('img[class="thePoster"]').each(function(){
+ $(data).find('div[class=movie]').each(function(index){
+  $(this).find('img[class=thePoster]').each(function(){
    src[index]=$(this).attr('src');
    alt[index]=$(this).attr('alt');
   });
-  $(this).find('div[class="thisWeek"]').each(function(){
+  $(this).find('div[class=thisWeek]').each(function(){
    com[index]=$(this).text();
   });
   if(!com[index]) com[index]='&nbsp;';

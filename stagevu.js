@@ -1,5 +1,5 @@
 var CsU=[],CsS=[],CsX=[],CN=0;
-CsU[CN]="html~http://stagevu.com/search?for=|&in=Videos";
+CsU[CN]="http://stagevu.com/search?for=|&in=Videos";
 CsS[CN]="*";
 CsX[CN]='//div[@id="resultsbox1"]';
 function parsestagevu(id,data){

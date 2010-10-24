@@ -1,5 +1,5 @@
 var CN=CN+1;
-CsU[CN]="html~http://www.nyaatorrents.org/?page=search&cat=0_0&filter=0&term=|";
+CsU[CN]="http://www.nyaatorrents.org/?page=search&cat=0_0&filter=0&term=|";
 CsS[CN]="*";
 CsX[CN]='//table[@class="tlist"]/tr[@class!="tlisthead"]';
 function parsenyaatorrents0(id,data){
