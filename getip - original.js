@@ -5,7 +5,7 @@ String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.
 for(var t=0;t<Cs.length;t++){
  CsS[t]='<script src="'+Db[0]+Cs[t]+'.js"></script>';
  CsC[t]='case "'+Cs[t]+'": parse'+Cs[t]+'(id,data.responseText); break;';
- var CF='("searchbox",CUF[1].replace("|",tags)+"&rrr="+Math.random(),"'+Cs[t]+'",CsS['+t+'],CsX['+t+'])';
+ var CF='("searchbox",CsU['+t+'].replace("|",tags)+"&rrr="+Math.random(),"'+Cs[t]+'",CsS['+t+'],CsX['+t+'])';
  switch(Cs[t]){
   case Cs[0]:
    CsC2[t]=
