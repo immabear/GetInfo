@@ -35,19 +35,17 @@ function error(id){
  alert(humanerror.join('\n'));
 }
 function tab(id){
+ var i=$("#"+id).attr("cellIndex");
  $("#"+id).attr("class","middle");
  $("#"+id+" button").addClass('activebutton');
  $("#"+$('#'+id).parent().attr('id')+" td[class]").each(function(){
-  if((this).cellIndex!==$("#"+id).attr("cellIndex")){
-   $(this).find("button").removeClass('activebutton');
-  }
-  if((this).cellIndex<$("#"+id).attr("cellIndex")){
-   if((this).cellIndex==0){$(this).attr("class","farleft");}
+  var ti=(this).cellIndex;
+  if(ti!==i)$(this).find("button").removeClass('activebutton');
+  if(ti<i){
+   if(ti==0)$(this).attr("class","farleft");
    else $(this).attr("class","left");
   }
-  else if((this).cellIndex>$("#"+id).attr("cellIndex")&&(this).className!=="farright"){
-   $(this).attr("class","right");
-  }
+  else if(ti>i&&(this).className!=="farright")$(this).attr("class","right");
  })
 }
 function show(id){
@@ -74,7 +72,7 @@ function minmaximize(x){
  }
 }
 function aligntd(){
- $("td[class!='noalign']").attr("align","center");
+ $("td[class!=noalign]").attr("align","center");
 }
 function advsearch(id){
  tab('searchtasktd');
