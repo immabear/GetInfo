@@ -17,7 +17,6 @@ function parsebtjunkie(id,data){
    dataarray[index]=dataarray[index].replace(/p>(\s+)</g,'').replace(/\s+/g,' ');
    if(dataarray[index].search(/<strong>/)==-1)dataarray[index]=dataarray[index].replace(/<\/strong>/,'<strong>');
    dataarray[index]=dataarray[index].replace(/<strong>/,'<strong>|||');
-   alert(dataarray[index]);
    var temparray=$(dataarray[index]).text();
    title[index]=temparray.split('|||')[0];
    loc[index]=dataarray[index].replace(/<a.*href=\"|\".*/g,'');
