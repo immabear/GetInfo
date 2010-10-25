@@ -50,7 +50,7 @@ var page="
 <div id='bd'>
  <table id='mtb'><tr id='mt'>
    <td id='htd' class='m'><b_ id='ht' class='btm active' onclick='tab(this.parentNode.id);show(\"h\")'>Home</b_></td>
-   <td id='std' class='r'><b_ id='st' class='btm' onclick='tab(this.parentNode.id);show(\"search\")'>Search</b_></td>
+   <td id='std' class='r'><b_ id='st' class='btm' onclick='tab(this.parentNode.id);show(\"s\")'>Search</b_></td>
    <td id='ftd'>&nbsp;</td>
    <td id='mtd' class='fr'><b_ id='mm' class='btm' onclick='mm(0)'>Minimize</b_></td>
  </tr></table>
