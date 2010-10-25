@@ -73,7 +73,7 @@ var page="
      </select>
     </td>
     <td id='sctd'><input id='sct' type='text' size='25' value='Search Tags'></td>
-    <td class='fr' id='sbd'><b_ id='sb' class='btm' onclick='search()'>Search</b_></td>
+    <td class='fr' id='sbd'><b_ id='sbt' class='btm' onclick='search()'>Search</b_></td>
   </tr></table>
   <div id='sb'>
   </div>
