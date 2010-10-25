@@ -75,7 +75,7 @@ function parsenyaatorrents(id,data){
   }
  });
  $('#'+id).html(tablecd);
- aligntd();
+ atd();
  $('#'+id+' div[id]').last().css('margin-bottom','10px');
  $('#'+id+' div[id]').tooltip({effect:'slide',offset:[27,10],relative:'true'});
  var dataarray=[],title=[],seed=[],leech=[],cat=[],alt=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
