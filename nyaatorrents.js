@@ -65,8 +65,8 @@ function parsenyaatorrents(id,data){
 	  '</tr>'+
 	  '<tr>'+
 	   '<td style="height:30px">'+
-	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed">IMDb</button>'+
-	    '<button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="buttonmed">Download</button>'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="btm">IMDb</button>'+
+	    '<button onclick="downloadnyaatorrents(\''+loc[index]+'\');" class="btm">Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+
@@ -81,5 +81,5 @@ function parsenyaatorrents(id,data){
  var dataarray=[],title=[],seed=[],leech=[],cat=[],alt=[],size=[],com=[],loc=[],dls=[],tablerow,tablecd='';
 }
 function downloadnyaatorrents(loc){
- $("#searchframe").html("<iframe src='"+loc+"' class='searchframe' frameborder='0'></frame>").show(600);
+ $("#sf").html("<iframe src='"+loc+"' class='sf' frameborder='0'></frame>").show(600);
 }

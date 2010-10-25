@@ -1,11 +1,14 @@
 var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human error:","1)The script was initiated from an offline xul page (e.g. 'About:Blank') removing domain access.","2)An internet connection is not present.","3)The search query came back empty-handed, and the script threw a tantrum.","4)An unknown error occured, but it's your fault."],
 hal=["...I'm sorry, Dave, I'm afraid I can't do that."],
 sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
-$('#searchtags').live('keypress',function(e){
+$('#sct').live('keypress',function(e){
  if(e.keyCode==13)search();
 });
-function fetchPage(id,url,parser,select,xpath){
+function fetch(id,url,parser,select,xpath){
  $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
+ if(!parser)parser='';
+ if(!select)select='*';
+ if(!xpath)xpath='*';
  if(url.search(/DOMAIN/)!==-1){
   var temp=url.split("/");
   url=temp[0]+"//"+temp[2]+"/";
@@ -36,50 +39,50 @@ function error(id){
 }
 function tab(id){
  var i=$("#"+id).attr("cellIndex");
- $("#"+id).attr("class","middle");
- $("#"+id+" button").addClass('activebutton');
+ $("#"+id).attr("class","m");
+ $("#"+id+" button").addClass('active');
  $("#"+$('#'+id).parent().attr('id')+" td[class]").each(function(){
   var ti=(this).cellIndex;
-  if(ti!==i)$(this).find("button").removeClass('activebutton');
+  if(ti!==i)$(this).find("button").removeClass('active');
   if(ti<i){
-   if(ti==0)$(this).attr("class","farleft");
-   else $(this).attr("class","left");
+   if(ti==0)$(this).attr("class","fl");
+   else $(this).attr("class","l");
   }
-  else if(ti>i&&(this).className!=="farright")$(this).attr("class","right");
+  else if(ti>i&&(this).className!=="fr")$(this).attr("class","r");
  })
 }
 function show(id){
- $("#bodydiv").children("div").css("display","none");
+ $("#bd").children("div").css("display","none");
  $("#"+id).css("display","");
 }
-function minmaximize(x){
+function mm(x){
  switch(x){
   case 0:
-   $("#searchframe").show(600);
-   $("#bodydiv").animate({'marginTop':'-30px','top':'100%','height':'30px'},600,
+   $("#sf").show(600);
+   $("#bd").animate({'marginTop':'-30px','top':'100%','height':'30px'},600,
     function(){
-     $("#minmax").text("Maximize").each(function(){(this).onclick=function(){minmaximize()}});
+     $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
 	}
    );
    break;
   default:
-   $("#searchframe").hide(600);
-   $("#bodydiv").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
+   $("#sf").hide(600);
+   $("#bd").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
     function(){
-     $("#minmax").text("Minimize").each(function(){(this).onclick=function(){minmaximize(0)}});
+     $("#mm").text("Minimize").each(function(){(this).onclick=function(){mm(0)}});
 	}
    );
  }
 }
-function aligntd(){
+function atd(){
  $("td[class!=noalign]").attr("align","center");
 }
 function advsearch(id){
- tab('searchtasktd');
+ tab('std');
  show('search');
- $("#searchtags").attr("value",$("#"+id).html());
+ $("#sct").attr("value",$("#"+id).html());
 }
 function IMDb(id){
-minmaximize(0);
-$("#searchframe").html("<iframe src='http://www.imdb.com/find?s=all&q="+document.getElementById(id).innerHTML.replace(/ /g,'+')+"' class='searchframe' frameborder='0'></frame>").show(600);
+mm(0);
+$("#sf").html("<iframe src='http://www.imdb.com/find?s=all&q="+$("#"+id).html().replace(/ /g,'+')+"' class='sf' frameborder='0'></frame>").show(600);
 }

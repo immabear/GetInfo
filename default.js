@@ -21,8 +21,8 @@ function parse(id,data){
      '</tr>'+
      '<tr>'+
       '<td style="height:30px">'+
-       '<button onclick="IMDb(\'searchresult'+index+'\')" class="button">IMDb</button>'+
-       '<button onclick= "advsearch(\'searchresult'+index+'\');" class="button">Search</button>'+
+       '<button onclick="IMDb(\'searchresult'+index+'\')" class="btn">IMDb</button>'+
+       '<button onclick= "advsearch(\'searchresult'+index+'\');" class="btn">Search</button>'+
       '</td>'+
      '</tr>'+
     '</table>'+

@@ -54,7 +54,7 @@ button:hover{
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#EEF2FF', endColorstr='#D1D5EE')";
 }
 
-.activebutton{
+.active{
 	color:#000000;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -66,7 +66,7 @@ button:hover{
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#EEF2FF', endColorstr='#A9DBF6')";
 }
 
-.right{
+.r{
 	border-left:0;
 	-moz-border-radius-topright:10px;
 	-webkit-border-top-right-radius:10px;
@@ -74,7 +74,7 @@ button:hover{
 	border-bottom:2px solid #AAAAAA;
 }
 
-.left{
+.l{
 	border-right:0;
 	-moz-border-radius-topleft:10px;
 	-webkit-border-top-left-radius:10px;
@@ -82,21 +82,21 @@ button:hover{
 	border-bottom:2px solid #AAAAAA;
 }
 
-.middle{
+.m{
  	-moz-border-radius:10px 10px 0 0;
 	-webkit-border-radius:10px 10px 0 0;
 	border-radius:10px 10px 0 0;
 	border-bottom:2px solid transparent;
 }
 
-.farright{
+.fr{
  	-moz-border-radius-topright:10px;
 	-webkit-border-top-right-radius:10px;
 	border-top-right-radius:10px;
 	border-bottom:2px solid #AAAAAA;
 }
 
-.farleft{
+.fl{
 	border-right:0;
  	-moz-border-radius-topleft:10px;
 	-webkit-border-top-left-radius:10px;
@@ -104,7 +104,7 @@ button:hover{
 	border-bottom:2px solid #AAAAAA;
 }
 
-.farright,#fillertask,#searchcont{
+.fr,#ftd,#sctd{
 	border-left:0;
 	border-right:0;
 }
@@ -178,15 +178,15 @@ button:hover{
 	color:white;
 }
 
-.button {
+.bt {
 	width:60px;
 }
 
-.buttonmed {
+.btm {
 	width:70px;
 }
 
-.buttonbig {
+.btb {
 	width:120px;
 }
 
@@ -205,7 +205,7 @@ button:hover{
 	border-radius:5px;
 }
 
-#bodydiv{
+#bd{
 	background:#EEF2FF;
 	background: -moz-linear-gradient(center top, #D1D5EE 0%,#EEF2FF 25%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D1D5EE),color-stop(.25, #EEF2FF));
@@ -222,22 +222,22 @@ button:hover{
 	margin-top:-302px;
 }
 
-#maintaskbar{
+#mtb{
 	width:804px;
 	height:30px;
 	margin:-2px;
 	margin-bottom:0;
 }
 
-#clientselect{
+#ss{
 	width:30px;
 }
 
-#hometasktd,#minmaxtd,#searchbuttd,#searchtasktd{
+#htd,#mtd,#sbd,#std{
 	width:80px;
 }
 
-#home{
+#h{
 	width:776px;
 	height:546px;
 	color:black;
@@ -245,23 +245,23 @@ button:hover{
 	margin-top:10px;
 }
 
-#hometaskbar,#searchtaskbar{
+#htb,#stb{
 	width:780px;
 	height:30px;
 	margin:-2px;
 	margin-bottom:0;
 }
 
-#theatertasktd,#soontasktd,#dvdtasktd{
+#ttd,#sntd,#dtd{
 	width:130px;
 }
 
-#fillertasktd{
+#ftd{
 	border:0;
 	border-bottom:2px solid #AAAAAA;
 }
 
-#homebox,#searchbox{
+#hb,#sb{
 	overflow:auto;
 	width:752px;
 	height:492px;
@@ -275,20 +275,20 @@ button:hover{
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E0E4F7', endColorstr='#D6DAF0')";
 }
 
-#search{
+#s{
 	width:776px;
 	height:546px;
 	color:black;
 	margin:10px;
 }
 
-#searchtype{
+#ss{
 	color:black;
 	background-color:transparent;
 	border:0;
 }
 
-#searchtags{
+#sct{
 	margin-left:10px;
 	color:black;
 	background: #D1D5EE;
@@ -299,7 +299,7 @@ button:hover{
 	width:585px;
 }
 
-#searchframe,#background,.searchframe{
+#sf,#bg,.sf{
 	position:absolute;
 	left:0px;
 	top:0px;
@@ -308,7 +308,7 @@ button:hover{
 	border:0;
 }
 
-#background{
+#bg{
 	background: #D1D5EE;
 	background: -moz-linear-gradient(center top, #D1D5EE 0%,#EEF2FF 25%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D1D5EE),color-stop(.25, #EEF2FF));

@@ -63,5 +63,5 @@ function parsestagevu(id,data){
 }
 function downloadstagevu(loc){
  minmaximize(0);
- $("#searchframe").html("<iframe style='overflow:hidden;border:0;width:100%;height:100%' src='http://stagevu.com/embed?width=780&amp;height=600&amp;background=transparent&amp;uid="+loc+"'scrolling='no'></iframe>").show(600);
+ $("#sf").html("<iframe style='overflow:hidden;border:0;width:100%;height:100%' src='http://stagevu.com/embed?width=780&amp;height=600&amp;background=transparent&amp;uid="+loc+"'scrolling='no'></iframe>").show(600);
 }

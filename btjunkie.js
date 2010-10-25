@@ -69,8 +69,8 @@ function parsebtjunkie(id,data){
 	  '</tr>'+
 	  '<tr>'+
 	   '<td style="height:30px">'+
-	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="buttonmed">IMDb</button>'+
-	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="buttonmed">Download</button>'+
+	    '<button onclick="IMDb(\'searchresult'+index+'\')" class="btm">IMDb</button>'+
+	    '<button onclick="downloadbtjunkie(\''+loc[index]+'\');" class="btm">Download</button>'+
 	   '</td>'+
 	  '</tr>'+
 	 '</table>'+
@@ -86,5 +86,5 @@ function parsebtjunkie(id,data){
 }
 function downloadbtjunkie(loc){
  minmaximize(0);
- $("#searchframe").html("<iframe src='http://dl.btjunkie.org"+loc+"/download.torrent' class='searchframe' frameborder='0'></frame>").show(600);
+ $("#sf").html("<iframe src='http://dl.btjunkie.org"+loc+"/download.torrent' class='sf' frameborder='0'></frame>").show(600);
 }

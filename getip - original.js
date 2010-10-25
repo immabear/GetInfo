@@ -1,30 +1,22 @@
 function Retriever(){
-var Cs=["stagevu","btjunkie","nyaatorrents","debug"], CsS=[], CsC=[], CsC2=[], CsSC=[],
-Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.tools.min.js","jquery.xdomainajax.js","tasks.js","default.js"], DbS=[];
-String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
+var Cs=["stagevu","btjunkie","nyaatorrents","debug"],CsS=[],CsC=[],CsC2=[],CsSC=[],CF,
+Db=["http://github.com/immabear/GetInfo/raw/master/","jquery.tools.min","jquery.xdomainajax","tasks","default"],DbS=[];
+String.prototype.cap=function(){return this.charAt(0).toUpperCase()+this.slice(1);};
 for(var t=0;t<Cs.length;t++){
  CsS[t]='<script src="'+Db[0]+Cs[t]+'.js"></script>';
  CsC[t]='case "'+Cs[t]+'": parse'+Cs[t]+'(id,data.responseText); break;';
- var CF='("searchbox",CsU['+t+'].replace("|",tags)+"&rrr="+Math.random(),"'+Cs[t]+'",CsS['+t+'],CsX['+t+'])';
+ CF='("sb",CsU['+t+'].replace("|",tags)+"&rrr="+Math.random(),"'+Cs[t]+'",CsS['+t+'],CsX['+t+'])';
  switch(Cs[t]){
   case Cs[0]:
-   CsC2[t]=
-    'default:
-      fetchPage'+CF+';
-	  break;';
+   CsC2[t]='default: fetch'+CF+';break;';
    break;
   default:
-   CsC2[t]=
-    'case "'+Cs[t]+'":
-	 fetchPage'+CF+';
-	 break;';
+   CsC2[t]='case "'+Cs[t]+'": fetch'+CF+';break;';
    break;
  }
- CsSC[t]='<option value="'+Cs[t]+'">'+Cs[t].capitalize()+':</option>';
+ CsSC[t]='<option value="'+Cs[t]+'">'+Cs[t].cap()+':</option>';
 }
-for(var t=1;t<Db.length;t++){
- DbS[t]='<script src="'+Db[0]+Db[t]+'"></script>';
-}
+for(var t=1;t<Db.length;t++){DbS[t]='<script src="'+Db[0]+Db[t]+'.js"></script>';}
 var page="
 <!doctype html> 
 <html lang='en'> 
@@ -46,58 +38,52 @@ var page="
   }
  }
  function search(){
-  var tags=document.getElementById('searchtags').value.replace(/ /g,'+'),
-  type=$('#searchtype').attr('value');
+  var tags=document.getElementById('sct').value.replace(/ /g,'+'),type=$('#ss').attr('value');
   if(tags=='')tags='DOMAIN';
   switch(type){
     "+CsC2.join(' ')+"
-   }
+  }
  }
 </script>
 </head>
-<body onload=\"aligntd();fetchPage('homebox',sources[0],'','*','*')\">
-<div id='bodydiv'>
- <table id='maintaskbar'>
-  <tr id='taskbar'>
-   <td id='hometasktd' class='middle'><button id='hometask' class='buttonmed activebutton' onclick='tab(this.parentNode.id);show(\"home\")'>Home</button></td>
-   <td id='searchtasktd' class='right'><button id='searchtask' class='buttonmed' onclick='tab(this.parentNode.id);show(\"search\")'>Search</button></td>
-   <td id='fillertask'>&nbsp;</td>
-   <td class='farright' id='minmaxtd'><button id='minmax' class='buttonmed' onclick='minmaximize(0)'>Minimize</button></td>
-  </tr>
- </table>
- <div id='home'>
-  <table id='hometaskbar'>
-   <tr id='movietask'>
-    <td id='theatertasktd' class='middle'><button id='theatertask' class='buttonbig activebutton' onclick=\"tab(this.parentNode.id);fetchPage('homebox',sources[0],'','*','*');\">In Theaters</button></td>
-    <td id='soontasktd' class='right'><button id='soontask' class='buttonbig' onclick=\"tab(this.parentNode.id);fetchPage('homebox',sources[1],'','*','*');\">Coming Soon</button></td>
-    <td id='dvdtasktd' class='right'><button id='dvdtask' class='buttonbig' onclick=\"tab(this.parentNode.id);fetchPage('homebox',sources[2],'','*','*');\">On DVD/Bluray</button></td>
-    <td id='fillertasktd'>&nbsp;</td>
-   </tr>
-  </table>
-  <div id='homebox'>
+<body onload=\"atd();fetch('hb',sources[0])\">
+<div id='bd'>
+ <table id='mtb'><tr id='mt'>
+   <td id='htd' class='m'><b_ id='ht' class='btm active' onclick='tab(this.parentNode.id);show(\"h\")'>Home</b_></td>
+   <td id='std' class='r'><b_ id='st' class='btm' onclick='tab(this.parentNode.id);show(\"search\")'>Search</b_></td>
+   <td id='ftd'>&nbsp;</td>
+   <td id='mtd' class='fr'><b_ id='mm' class='btm' onclick='mm(0)'>Minimize</b_></td>
+ </tr></table>
+ <div id='h'>
+  <table id='htb'><tr id='ht'>
+    <td id='ttd' class='m'><b_ id='tt' class='btb active' onclick=\"tab(this.parentNode.id);fetch('hb',sources[0])\">In Theaters</b_></td>
+    <td id='sntd' class='r'><b_ id='snt' class='btb' onclick=\"tab(this.parentNode.id);fetch('hb',sources[1])\">Coming Soon</b_></td>
+    <td id='dtd' class='r'><b_ id='dt' class='btb' onclick=\"tab(this.parentNode.id);fetch('hb',sources[2])\">On DVD/Bluray</b_></td>
+    <td id='ftd'>&nbsp;</td>
+  </tr></table>
+  <div id='hb'>
   </div>
  </div>
- <div id='search' style='display:none'>
-  <table id='searchtaskbar'>
-   <tr>
-    <td class='farleft' id='Cselect'>
-     <select id='searchtype'>
+ <div id='s' style='display:none'>
+  <table id='stb'><tr>
+    <td class='fl' id='ctd'>
+     <select id='ss'>
       <option value=''>Choose Type</option>
       "+CsSC.join(' ')+"
      </select>
     </td>
-    <td id='searchcont'><input id='searchtags' type='text' size='25' value='Search Tags'></td>
-    <td class='farright' id='searchbuttd'><button id='searchbut' class='buttonmed' onclick='search()'>Search</button></td>
-   </tr>
-  </table>
-  <div id='searchbox'>
+    <td id='sctd'><input id='sct' type='text' size='25' value='Search Tags'></td>
+    <td class='fr' id='sbd'><b_ id='sb' class='btm' onclick='search()'>Search</b_></td>
+  </tr></table>
+  <div id='sb'>
   </div>
  </div>
 </div>
-<div id='background'></div>
-<div id='searchframe' style='display:none'></div>
+<div id='bg'></div>
+<div id='sf' style='display:none'></div>
 </body>
 </html>";
-var Cs=[], CsS=[], CsC=[], CsC2=[], CsSC=[], DbS=[];
+var Cs=[],CsS=[],CsC=[],CsC2=[],CsSC=[],Db=[],DbS=[];
+page=page.replace(/b_/g,'button');
 return page;
 }
