@@ -7,8 +7,6 @@ $('#sct').live('keypress',function(e){
 });
 //googlescribe
 gsblet=window.gsblet||{};
-if(!gsblet.toggle)(
- function scribe(){
   var t=gsblet,d=document,o=d.body,c="createElement",a="appendChild",p=window.location.protocol;
   t["b"]="googlescribe.appspot.com";
   t["l"]="en";
@@ -17,8 +15,6 @@ if(!gsblet.toggle)(
    x=o[a](d[c]("script"));
    x.id="gsbletloader";
    x.src=(p=="https:"?"https:":"http:")+"//"+t["b"]+"/jsres/rgsblet.js?v="+(new Date().getTime());
-  });
-scribe();
 gsblet.toggle(false);
 //functions
 function fetch(id,url,parser,select,xpath){
