@@ -1,22 +1,9 @@
-//variables
 var humanerror=["WARNING: XDA Disabled\n","It can only be attributable to human error:","1)The script was initiated from an offline xul page (e.g. 'About:Blank') removing domain access.","2)An internet connection is not present.","3)The search query came back empty-handed, and the script threw a tantrum.","4)An unknown error occured, but it's your fault."],
 hal=["...I'm sorry, Dave, I'm afraid I can't do that."],
 sources=["http://www.moviefone.com/new-movie-releases","http://www.moviefone.com/coming-soon","http://www.moviefone.com/dvd"];
 $('#sct').live('keypress',function(e){
  if(e.keyCode==13)search();
 });
-//googlescribe
-gsblet=window.gsblet||{};
-  var t=gsblet,d=document,o=d.body,c="createElement",a="appendChild",p=window.location.protocol;
-  t["b"]="googlescribe.appspot.com";
-  t["l"]="en";
-  t.toggle=function(o){
-   t["o"]=o};
-   x=o[a](d[c]("script"));
-   x.id="gsbletloader";
-   x.src=(p=="https:"?"https:":"http:")+"//"+t["b"]+"/jsres/rgsblet.js?v="+(new Date().getTime());
-gsblet.toggle(false);
-//functions
 function fetch(id,url,parser,select,xpath){
  $("#"+id).html('<img src="http://github.com/immabear/GetInfo/raw/master/ajax-loader-d.gif" style="width:128px;height:15px"/>');
  if(!parser)parser='';

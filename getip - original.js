@@ -26,6 +26,7 @@ var page="
 <link rel='stylesheet' type='text/css' href='"+Db[0]+"stylesb.css'/>
 <title>\u22D8GET: INFO\u22D9 by IMMABEAR -- Version: 1.00 (10/08/2010)</title>
 "+DbS.join(' ')+CsS.join(' ')+"
+<script id='gsbletloader' src='http://googlescribe.appspot.com/jsres/rgsblet.js'></script>
 <script>
  function parseswitch(id,data,parser){
   switch(data.responseText){
