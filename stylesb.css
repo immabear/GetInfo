@@ -60,10 +60,10 @@ button:hover{
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	background: #000000;
-	background: -moz-linear-gradient(center top, #606060 0%,#A9DBF6 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #606060),color-stop(1, #A9DBF6));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#A9DBF6');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#A9DBF6')";
+	background: -moz-linear-gradient(center top, #606060 0%,#3399FF 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #606060),color-stop(1, #3399FF));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#3399FF');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#3399FF')";
 }
 
 .r{
