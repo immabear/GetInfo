@@ -66,8 +66,8 @@ function mm(x){
 	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
 	  }
 	 );
-     $("#mtb").animate({'width':'245px'},600);
 	}
+    $("#mtb").animate({'width':'245px'},600);
    );
    break;
   default:
