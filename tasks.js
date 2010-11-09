@@ -79,7 +79,7 @@ function atd(){
 }
 function advsearch(id){
  tab('std');
- show('search');
+ show('s');
  $("#sct").attr("value",$("#"+id).html());
 }
 function IMDb(id){
