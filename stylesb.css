@@ -42,19 +42,7 @@ button{
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060')";
 } 
 
-button:hover{
-	color:#FFFFFF;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	background: #000000;
-	background: -moz-linear-gradient(center top, #606060 0%,#000000 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #606060),color-stop(1, #000000));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#000000');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#000000')";
-}
-
-.active{
+.active, button:hover{
 	color:#FFFFFF;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
