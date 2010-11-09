@@ -65,9 +65,9 @@ function mm(x){
 	 $("#bd").animate({'width':'200px'},600,
 	  function(){
 	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
-	  };
+	  }
 	 );
-	};
+	}
    );
    break;
   default:
@@ -75,7 +75,7 @@ function mm(x){
    $("#bd").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
     function(){
      $("#mm").text("Minimize").each(function(){(this).onclick=function(){mm(0)}});
-	};
+	}
    );
  }
 }
