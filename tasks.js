@@ -61,12 +61,12 @@ function mm(x){
    $("#sf").show(600);
    $("#bd").animate({'marginTop':'-30px','top':'100%','height':'30px'},600,
     function(){
-	 $("#bd").animate({'width':'250px'},600,
+	 $("#bd").animate({'width':'245px'},600,
 	  function(){
 	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
 	  }
 	 );
-     $("#mtb").animate({'width':'254px'},600);
+     $("#mtb").animate({'width':'249px'},600);
 	}
    );
    break;
