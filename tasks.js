@@ -63,6 +63,7 @@ function mm(x){
     function(){
 	 $("#bd").animate({'width':'260px'},600,
 	  function(){
+	   $("#mtb").attr('width','264px');
 	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
 	  }
 	 );
