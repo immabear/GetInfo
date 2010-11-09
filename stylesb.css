@@ -213,7 +213,7 @@ button:hover{
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060')";
 	width:800px;
 	height:600px;
-	color:black;
+	color:#FFFFFF;
 	position:absolute;
 	z-index:10;
 	left:50%;
@@ -236,7 +236,7 @@ button:hover{
 #h{
 	width:776px;
 	height:546px;
-	color:black;
+	color:#FFFFFF;
 	margin-left:10px;
 	margin-top:10px;
 }
@@ -261,7 +261,7 @@ button:hover{
 	overflow:auto;
 	width:752px;
 	height:492px;
-	color:black;
+	color:#FFFFFF;
 	margin-left:10px;
 	margin-top:10px;
 	background: #000000;
@@ -274,19 +274,19 @@ button:hover{
 #s{
 	width:776px;
 	height:546px;
-	color:black;
+	color:#FFFFFF;
 	margin:10px;
 }
 
 #ss{
-	color:black;
+	color:#FFFFFF;
 	background-color:transparent;
 	border:0;
 }
 
 #sct{
 	margin-left:10px;
-	color:black;
+	color:#FFFFFF;
 	background: #000000;
 	background: -moz-linear-gradient(center top, #000000 0%,#606060 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #606060));
