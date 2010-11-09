@@ -58,11 +58,16 @@ function show(id){
 function mm(x){
  switch(x){
   case 0:
+   alert($("#bd").attr('width'));
    $("#sf").show(600);
    $("#bd").animate({'marginTop':'-30px','top':'100%','height':'30px'},600,
     function(){
-     $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
-	}
+	 $("#bd").animate({'width':'200px'},600,
+	  function(){
+	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
+	  };
+	 );
+	};
    );
    break;
   default:
@@ -70,7 +75,7 @@ function mm(x){
    $("#bd").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
     function(){
      $("#mm").text("Minimize").each(function(){(this).onclick=function(){mm(0)}});
-	}
+	};
    );
  }
 }
