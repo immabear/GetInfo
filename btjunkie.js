@@ -85,6 +85,6 @@ function parsebtjunkie(id,data){
  var dataarray=[],title=[],temp=[],seed=[],leech=[],cat=[],size=[],date=[],com=[],loc=[],tablerow,tablecd='';
 }
 function downloadbtjunkie(loc){
- minmaximize(0);
+ mm(0);
  $("#sf").html("<iframe src='http://dl.btjunkie.org"+loc+"/download.torrent' class='sf' frameborder='0'></frame>").show(600);
 }

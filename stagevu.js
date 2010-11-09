@@ -62,6 +62,6 @@ function parsestagevu(id,data){
  var src=[],alt=[],desc=[],com=[],loc=[],lng=[],tablerow,tablecd='';
 }
 function downloadstagevu(loc){
- minmaximize(0);
+ mm(0);
  $("#sf").html("<iframe style='overflow:hidden;border:0;width:100%;height:100%' src='http://stagevu.com/embed?width=780&amp;height=600&amp;background=transparent&amp;uid="+loc+"'scrolling='no'></iframe>").show(600);
 }
