@@ -36,10 +36,10 @@ button{
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	background: #000000;
-	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #AAAAAA));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA')";
+	background: -moz-linear-gradient(center top, #000000 0%,#606060 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #606060));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060')";
 } 
 
 button:hover{
@@ -48,10 +48,10 @@ button:hover{
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	background: #000000;
-	background: -moz-linear-gradient(center top, #AAAAAA 0%,#000000 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AAAAAA),color-stop(1, #000000));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#AAAAAA', endColorstr='#000000');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#AAAAAA', endColorstr='#000000')";
+	background: -moz-linear-gradient(center top, #606060 0%,#000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #606060),color-stop(1, #000000));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#000000')";
 }
 
 .active{
@@ -60,10 +60,10 @@ button:hover{
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	background: #000000;
-	background: -moz-linear-gradient(center top, #AAAAAA 0%,#A9DBF6 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AAAAAA),color-stop(1, #A9DBF6));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#AAAAAA', endColorstr='#A9DBF6');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#AAAAAA', endColorstr='#A9DBF6')";
+	background: -moz-linear-gradient(center top, #606060 0%,#A9DBF6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #606060),color-stop(1, #A9DBF6));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#A9DBF6');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#606060', endColorstr='#A9DBF6')";
 }
 
 .r{
@@ -113,9 +113,9 @@ button:hover{
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
-	background: #AAAAAA;
-	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #AAAAAA));
+	background: #606060;
+	background: -moz-linear-gradient(center top, #000000 0%,#606060 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #606060));
 	margin:10px;
 	margin-bottom:0px;
 	margin-right:0px;
@@ -206,11 +206,11 @@ button:hover{
 }
 
 #bd{
-	background:#AAAAAA;
-	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 25%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(.25, #AAAAAA));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA')";
+	background:#606060;
+	background: -moz-linear-gradient(center top, #000000 0%,#606060 25%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(.25, #606060));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060')";
 	width:800px;
 	height:600px;
 	color:black;
@@ -288,10 +288,10 @@ button:hover{
 	margin-left:10px;
 	color:black;
 	background: #000000;
-	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #AAAAAA));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA')";
+	background: -moz-linear-gradient(center top, #000000 0%,#606060 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(1, #606060));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060')";
 	width:585px;
 }
 
@@ -306,8 +306,8 @@ button:hover{
 
 #bg{
 	background: #000000;
-	background: -moz-linear-gradient(center top, #000000 0%,#AAAAAA 25%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(.25, #AAAAAA));
-	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#AAAAAA')";
+	background: -moz-linear-gradient(center top, #000000 0%,#606060 25%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000),color-stop(.25, #606060));
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#606060')";
 }
