@@ -79,7 +79,6 @@ var page="
   </div>
  </div>
 </div>
-<div id='bg'></div>
 <div id='sf' style='display:none'></div>
 </body>
 </html>";
