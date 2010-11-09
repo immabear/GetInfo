@@ -61,18 +61,17 @@ function mm(x){
    $("#sf").show(600);
    $("#bd").animate({'marginTop':'-30px','top':'100%','height':'30px'},600,
     function(){
-     $("#mtb").animate({'width':'264px'},600);
 	 $("#bd").animate({'width':'260px'},600,
 	  function(){
 	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
 	  }
 	 );
+     $("#mtb").animate({'width':'264px'},600);
 	}
    );
    break;
   default:
    $("#sf").hide(600);
-   $("#mtb").animate({'width':'804px'},600);
    $("#bd").animate({'width':'800px'},600,
     function(){
 	 $("#bd").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
@@ -82,6 +81,7 @@ function mm(x){
 	 );
 	}
    );
+   $("#mtb").animate({'width':'804px'},600);
  }
 }
 function atd(){
