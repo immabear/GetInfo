@@ -66,8 +66,8 @@ function mm(x){
 	   $("#mm").text("Maximize").each(function(){(this).onclick=function(){mm()}});
 	  }
 	 );
+     $("#mtb").animate({'width':'245px'},600);
 	}
-    $("#mtb").animate({'width':'245px'},600);
    );
    break;
   default:
@@ -79,9 +79,9 @@ function mm(x){
 	   $("#mm").text("Minimize").each(function(){(this).onclick=function(){mm(0)}});
 	  }
 	 );
+     $("#mtb").animate({'width':'804px'},600);
 	}
    );
-   $("#mtb").animate({'width':'804px'},600);
  }
 }
 function atd(){
