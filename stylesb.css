@@ -12,7 +12,7 @@ html,body{
 
 
 div{
-	border:2px solid #AAAAAA;
+	border:2px solid #FFFFFF;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
@@ -23,7 +23,7 @@ table{
 }
 
 td{
-	border:2px solid #AAAAAA;
+	border:2px solid #FFFFFF;
 }
 
 option,select{
@@ -71,7 +71,7 @@ button:hover{
 	-moz-border-radius-topright:10px;
 	-webkit-border-top-right-radius:10px;
 	border-top-right-radius:10px;
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .l{
@@ -79,7 +79,7 @@ button:hover{
 	-moz-border-radius-topleft:10px;
 	-webkit-border-top-left-radius:10px;
 	border-top-left-radius:10px;
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .m{
@@ -93,7 +93,7 @@ button:hover{
  	-moz-border-radius-topright:10px;
 	-webkit-border-top-right-radius:10px;
 	border-top-right-radius:10px;
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .fl{
@@ -101,7 +101,7 @@ button:hover{
  	-moz-border-radius-topleft:10px;
 	-webkit-border-top-left-radius:10px;
 	border-top-left-radius:10px;
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 .fr,#ftd,#sctd{
@@ -254,7 +254,7 @@ button:hover{
 
 #ftd{
 	border:0;
-	border-bottom:2px solid #AAAAAA;
+	border-bottom:2px solid #FFFFFF;
 }
 
 #hb,#sb{
