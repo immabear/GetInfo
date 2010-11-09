@@ -92,7 +92,7 @@ button{
 	border-bottom:2px solid #A8A8A8;
 }
 
-.fr,#ftd,#sctd{
+.fr,#ftd,#fftd,#sctd{
 	border-left:0;
 	border-right:0;
 }
@@ -240,7 +240,7 @@ button{
 	width:130px;
 }
 
-#ftd{
+#ftd,#fftd{
 	border:0;
 	border-bottom:2px solid #A8A8A8;
 }

@@ -59,7 +59,7 @@ var page="
     <td id='ttd' class='m'><b_ id='tt' class='btb active' onclick=\"tab(this.parentNode.id);fetch('hb',sources[0])\">In Theaters</b_></td>
     <td id='sntd' class='r'><b_ id='snt' class='btb' onclick=\"tab(this.parentNode.id);fetch('hb',sources[1])\">Coming Soon</b_></td>
     <td id='dtd' class='r'><b_ id='dt' class='btb' onclick=\"tab(this.parentNode.id);fetch('hb',sources[2])\">On DVD/Bluray</b_></td>
-    <td id='ftd'>&nbsp;</td>
+    <td id='fftd'>&nbsp;</td>
   </tr></table>
   <div id='hb'>
   </div>
