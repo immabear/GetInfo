@@ -17,12 +17,12 @@ function parse(id,data){
    '<div class="tooltip">'+
     '<table>'+
      '<tr>'+
-       '<td><b id="searchresult'+index+'">'+alt[index]+'</b></td>'+
+       '<td><b id="defaultresult'+index+'">'+alt[index]+'</b></td>'+
      '</tr>'+
      '<tr>'+
       '<td style="height:30px">'+
-       '<button onclick="IMDb(\'searchresult'+index+'\')" class="btn">IMDb</button>'+
-       '<button onclick= "advsearch(\'searchresult'+index+'\');" class="btn">Search</button>'+
+       '<button onclick="IMDb(\'defaultresult'+index+'\')" class="btn">IMDb</button>'+
+       '<button onclick= "advsearch(\'defaultresult'+index+'\');" class="btn">Search</button>'+
       '</td>'+
      '</tr>'+
     '</table>'+
