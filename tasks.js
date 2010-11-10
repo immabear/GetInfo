@@ -72,6 +72,7 @@ function mm(x){
    break;
   default:
    $("#sf").hide(600);
+   $("#mtb").animate({'width':'804px'},600);
    $("#bd").animate({'width':'800px'},600,
     function(){
 	 $("#bd").animate({'marginTop':'-300px','top':'50%','height':'600px'},600,
@@ -79,7 +80,6 @@ function mm(x){
 	   $("#mm").text("Minimize").each(function(){(this).onclick=function(){mm(0)}});
 	  }
 	 );
-     $("#mtb").animate({'width':'804px'},600);
 	}
    );
  }
